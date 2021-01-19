@@ -24,5 +24,7 @@ namespace G_Absence
         {
             InitializeComponent();
         }
+
+     
     }
 }

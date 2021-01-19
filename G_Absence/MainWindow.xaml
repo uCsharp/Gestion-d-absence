@@ -69,10 +69,41 @@
                 </Setter>
 
             </Style>
+            <Storyboard x:Key="Storyboard1">
+                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
+                </ObjectAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="rectangle">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-60.8"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rectangle">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="6.4"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle2">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path1">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
         </ResourceDictionary>
-        
+
     </Window.Resources>
-    
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseDown" SourceName="rectangle">
+            <BeginStoryboard x:Name="Storyboard1_BeginStoryboard" Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseDown" SourceName="rectangle1">
+            <RemoveStoryboard BeginStoryboardName="Storyboard1_BeginStoryboard"/>
+        </EventTrigger>
+    </Window.Triggers>
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition MinWidth="240" Width="*" />
@@ -96,7 +127,7 @@
 
                 <RadioButton  x:Name="btn"  Style="{StaticResource MenuButtonStyle}" Content="HOME"  Tag="{StaticResource screen}"  />
                 <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="AJOUTER"  Tag="{StaticResource plus}"  />
-                
+
                 <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="OPTIONS"  Tag="{StaticResource settings}" />
 
             </StackPanel>
@@ -110,21 +141,48 @@
             </Grid.RowDefinitions>
             <Grid  Background="White" >
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="40,0"   >
-               
-                <Path Data="{StaticResource bell}" Fill="#0B132B" Width="25"   />
+
+                    <Path Data="{StaticResource bell}" Fill="#0B132B" Width="25"   />
 
                     <Grid  >
+
                         <TextBlock FontWeight="DemiBold" Text="Salah eddib" VerticalAlignment="Center" Foreground="#0B132B" FontSize="18" Margin="40,0,30,0" />
-                        <Path Data="{StaticResource arrow_down}" Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center"  />
+                        <Path x:Name="path" Data="{StaticResource arrow_down}" Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center"  />
+
+                        <Grid x:Name="grid" Margin="40,50,0,-52" Visibility="Hidden"   >
+                            <Rectangle x:Name="rectangle2"  Fill="White" HorizontalAlignment="Left" Height="60.6"  VerticalAlignment="Top" Width="130.527"  RadiusY="7.627" RadiusX="7.627"/>
+                            <TextBlock x:Name="textBlock" FontWeight="DemiBold"  Text=" Logout" Margin="10"  VerticalAlignment="Center" Foreground="#0B132B" FontSize="18"   />
+                            <Path x:Name="path1" Data="{StaticResource logout}"  Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"  />
+
+
+                        </Grid>
+                        <Rectangle x:Name="rectangle1" Fill="Transparent"   HorizontalAlignment="Left" Height="30" Margin="35,22,0,0" RadiusY="7.627" RadiusX="7.627" VerticalAlignment="Top" Width="130.527"/>
+                        <Rectangle x:Name="rectangle" Fill="Transparent"   HorizontalAlignment="Left" Height="30" Margin="35,22,0,0" RadiusY="7.627" RadiusX="7.627" VerticalAlignment="Top" Width="130.527" RenderTransformOrigin="0.5,0.5">
+                            <Rectangle.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Rectangle.RenderTransform>
+                        </Rectangle>
+
+
+
                     </Grid>
 
-            </StackPanel>
+                </StackPanel>
+
+
             </Grid>
 
 
 
+
         </Grid>
-    
+
+
 
 
     </Grid>
