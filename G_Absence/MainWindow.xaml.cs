@@ -23,6 +23,7 @@ namespace G_Absence
         public MainWindow()
         {
             InitializeComponent();
+            
         }
 
      

@@ -5,11 +5,192 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:G_Absence"
         mc:Ignorable="d"
-        Title="MainWindow" Height="700" Width="1200">
+        Title="MainWindow" Height="800" Width="1300">
 
     <Window.Resources>
 
         <ResourceDictionary>
+
+            <Style x:Key="present" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+                                <ContentPresenter   HorizontalAlignment="Center" VerticalAlignment="Center"  Content="{TemplateBinding Content}" />
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+
+            <Style x:Key="jour" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+               
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Border Background="Red" Margin="15,10" CornerRadius="15" >
+                                    
+                                </Border>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+            <Style x:Key="justify" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Border Background="#00FF00" Margin="15,10" CornerRadius="15" >
+
+                                </Border>
+
+
+
+                            </Border>
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+            <Style x:Key="demiJour" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Border Background="Gray" Margin="40,10" CornerRadius="15" >
+                                    
+
+                                </Border>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+
+
             <Style x:Key="MenuButtonStyle" TargetType="{x:Type ToggleButton}" >
 
                 <Setter Property="Background" Value="Transparent"  />
@@ -173,6 +354,82 @@
                     </Grid>
 
                 </StackPanel>
+
+
+            </Grid>
+
+            <Grid Grid.Row="1" >
+                <Border Background="White" CornerRadius="20" Margin="40" >
+                    <Grid>
+
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="60"  />
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1.2*" />
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+
+                        <Border Grid.Column="0"   BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                        <Border Grid.Column="1" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                        <Border Grid.Column="2" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                        <Border Grid.Column="3" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                        <Border Grid.Column="4" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                        <Border Grid.Column="5" BorderBrush="#EBEFF3" BorderThickness="0,0,0,1"  />
+                        
+
+                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" > APRENANT</TextBlock>
+                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="1" >Lundi</TextBlock>
+                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="2" >Mardi</TextBlock>
+                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="3"> Mercredi</TextBlock>
+                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="4"> Jeudi</TextBlock>
+                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="5"> Vendredi</TextBlock>
+
+                        <StackPanel Grid.Row="1" x:Name="aprenantStack" >
+
+                            <Button FontSize="19" FontWeight="SemiBold"  Style="{StaticResource present}" Content="Salah Eddib" />
+
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="1" x:Name="lundiStack" >
+
+                            <Button   Style="{StaticResource jour}"   />
+
+                        </StackPanel>
+
+                        <StackPanel Grid.Row="1" Grid.Column="2" x:Name="mardiStack" >
+
+                            <Button Style="{StaticResource justify }"   />
+
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="3" x:Name="mercrediStack" >
+
+                            <Button Style="{StaticResource demiJour}"   />
+
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="4" x:Name="jeudiStack" >
+
+                            <Button Style="{StaticResource present}"   />
+
+                        </StackPanel>
+                        <StackPanel Grid.Row="1" Grid.Column="5" x:Name="VendrediStack" >
+
+                            <Button Style="{StaticResource present}"   />
+
+                        </StackPanel>
+                       
+
+
+
+
+
+                    </Grid>
+                </Border>
 
 
             </Grid>
