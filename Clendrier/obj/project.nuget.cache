@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "ui3td/Odob/FAF2+awbJcFtc29VWGfOA/Ouyyx2TRZyIbrzw2JjFBpwGNfxOXdVjdjyRaoLYWuXsmyH7yCxWPw==",
+  "dgSpecHash": "fjvdZkInC2Sa8BNFnHL/SWOYavW3uVBu8WoHFp7FyfSIVYbHF8rpFVlL6OoONq0PDagEOVz3PioQkZsVzlbqkg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Youcode\\Desktop\\Gestion-d-absence\\Clendrier\\Clendrier.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Youcode\\.nuget\\packages\\materialdesigncolors\\1.2.7\\materialdesigncolors.1.2.7.nupkg.sha512",
+    "C:\\Users\\Youcode\\.nuget\\packages\\materialdesignthemes\\3.2.0\\materialdesignthemes.3.2.0.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -19,3 +19,7 @@ C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\Cle
 C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\Clendrier.dll
 C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\Clendrier.pdb
 C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\Clendrier.genruntimeconfig.cache
+C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\bin\Debug\netcoreapp3.1\MaterialDesignColors.dll
+C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
+C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\App.baml
+C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\Clendrier.csproj.CopyComplete

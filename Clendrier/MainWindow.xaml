@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Clendrier"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Width="1240" Height="700">
     <Grid>
         <Frame x:Name="Main" Navigated="Main_Navigated" ></Frame>
     </Grid>
