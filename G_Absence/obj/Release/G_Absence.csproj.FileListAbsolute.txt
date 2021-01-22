@@ -1,0 +1,17 @@
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\bin\Release\G_Absence.exe.config
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\bin\Release\G_Absence.exe
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\bin\Release\G_Absence.pdb
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.csprojAssemblyReference.cache
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\Assets\icons.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\MainWindow.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\App.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence_MarkupCompile.cache
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence_MarkupCompile.lref
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\App.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\MainWindow.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.g.resources
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.Properties.Resources.resources
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.csproj.GenerateResource.cache
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.csproj.CoreCompileInputs.cache
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.exe
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.pdb

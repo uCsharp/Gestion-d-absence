@@ -367,7 +367,7 @@
                             <RowDefinition/>
                         </Grid.RowDefinitions>
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1.2*" />
+                            <ColumnDefinition Width="1.3*" />
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
@@ -393,33 +393,34 @@
 
                         <StackPanel Grid.Row="1" x:Name="aprenantStack" >
 
-                            <Button FontSize="19" FontWeight="SemiBold"  Style="{StaticResource present}" Content="Salah Eddib" />
+                           
 
                         </StackPanel>
                         <StackPanel Grid.Row="1" Grid.Column="1" x:Name="lundiStack" >
 
-                            <Button   Style="{StaticResource jour}"   />
+                          
 
                         </StackPanel>
 
                         <StackPanel Grid.Row="1" Grid.Column="2" x:Name="mardiStack" >
 
-                            <Button Style="{StaticResource justify }"   />
+                          
 
                         </StackPanel>
                         <StackPanel Grid.Row="1" Grid.Column="3" x:Name="mercrediStack" >
 
-                            <Button Style="{StaticResource demiJour}"   />
+                           
 
                         </StackPanel>
+                        
                         <StackPanel Grid.Row="1" Grid.Column="4" x:Name="jeudiStack" >
 
-                            <Button Style="{StaticResource present}"   />
+                          
 
                         </StackPanel>
                         <StackPanel Grid.Row="1" Grid.Column="5" x:Name="VendrediStack" >
 
-                            <Button Style="{StaticResource present}"   />
+                           
 
                         </StackPanel>
                        
