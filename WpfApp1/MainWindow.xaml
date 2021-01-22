@@ -14,7 +14,7 @@
         <Rectangle Fill="#0B132B" Width="200" Margin="0,0,1233.6,0.4" Grid.ColumnSpan="2"></Rectangle>
 
         <Rectangle Fill="White" Height="70" Margin="79.4,-2,-0.4,652.8" Grid.Column="1"></Rectangle>
-        <Rectangle Fill="#0460B2" Height="2" Margin="0,68,1240.6,650.8" Grid.ColumnSpan="2"/>
+        <Rectangle Fill="Blue" Height="5" Margin="0,64,20.6,651.8"/>
 
         <Ellipse
     Width="30"
@@ -29,6 +29,7 @@
                 <DropShadowEffect Opacity="0.5" ShadowDepth="1"/>
             </Ellipse.Effect>
         </Ellipse>
+        <Image Margin="8,6,1247.6,661.8" Source="YOUCODE_LOGO.png" Stretch="Fill" Grid.ColumnSpan="2"/>
 
 
 

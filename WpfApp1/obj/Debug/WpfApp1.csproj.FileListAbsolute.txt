@@ -30,3 +30,35 @@ C:\Users\youcode\Desktop\gestion d'absence mockup\Gestion-d-absence-main\WpfApp1
 C:\Users\youcode\Desktop\gestion d'absence mockup\Gestion-d-absence-main\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
 C:\Users\youcode\Desktop\gestion d'absence mockup\Gestion-d-absence-main\WpfApp1\obj\Debug\WpfApp1.exe
 C:\Users\youcode\Desktop\gestion d'absence mockup\Gestion-d-absence-main\WpfApp1\obj\Debug\WpfApp1.pdb
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\WpfApp1.exe.config
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\WpfApp1.exe
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\WpfApp1.pdb
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Auth.dll
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Auth.PlatformServices.dll
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Calendar.v3.dll
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Core.dll
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.dll
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.PlatformServices.dll
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Newtonsoft.Json.dll
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.pdb
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.xml
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Auth.pdb
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Auth.xml
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Calendar.v3.pdb
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Calendar.v3.xml
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Core.pdb
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Google.Apis.Core.xml
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\bin\Debug\Newtonsoft.Json.xml
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1.csprojAssemblyReference.cache
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\MainWindow.g.cs
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\App.g.cs
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.cache
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1_MarkupCompile.lref
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\MainWindow.baml
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1.g.resources
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1.Properties.Resources.resources
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1.csproj.GenerateResource.cache
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1.csproj.CoreCompileInputs.cache
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1.csproj.CopyComplete
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1.exe
+C:\Users\youcode\Desktop\Gestion-d-absence\WpfApp1\obj\Debug\WpfApp1.pdb
