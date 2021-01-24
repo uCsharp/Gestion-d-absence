@@ -34,7 +34,7 @@ namespace G_Absence
         {
             InitializeComponent();
 
-            user = User.login("salaheddib@gmail.com", "12345");
+            user = User.login("salahDibe@gmail.com", "user");
 
             date = DateTime.Today; 
 
@@ -45,6 +45,7 @@ namespace G_Absence
             //MessageBox.Show(mondayOLastWeek.StartOfWeek(DayOfWeek.Thursday).ToShortDateString());
 
 
+<<<<<<< Updated upstream
             LoadList();
 
 
@@ -55,6 +56,9 @@ namespace G_Absence
         {
 
             var aprenetList = user.GetAprenant(1);
+=======
+            var aprenetList = user.GetAprenant(2);
+>>>>>>> Stashed changes
 
             aprenetList.ForEach(aprenant =>
             {
@@ -85,6 +89,7 @@ namespace G_Absence
 
                     if (absence["date"] == date.StartOfWeek(DayOfWeek.Monday).ToString())
                     {
+<<<<<<< Updated upstream
                         apr[3] = absence["id"];
                         apr[4] = absence["duration"];
                         apr[5] = absence["is_justify"];
@@ -94,6 +99,9 @@ namespace G_Absence
                             buttonL.Style = FindResource("justify") as Style;
                         }
                         else if (absence["duration"] == "demijour")
+=======
+                        if (absence["date"] == DateTime.Now.StartOfWeek(DayOfWeek.Monday).ToString())
+>>>>>>> Stashed changes
                         {
 
                             buttonL.Style = FindResource("demiJour") as Style;
