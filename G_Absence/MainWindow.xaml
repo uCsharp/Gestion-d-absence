@@ -63,7 +63,7 @@
                 <Setter Property="BorderThickness" Value="0,0,1,1"  />
                 <Setter Property="Height" Value="50"  />
                 <Setter Property="FontSize" Value="19"  />
-               
+
 
                 <Setter Property="Template"  >
 
@@ -74,7 +74,7 @@
                             <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
 
                                 <Border Background="Red" Margin="15,10" CornerRadius="15" >
-                                    
+
                                 </Border>
 
 
@@ -163,7 +163,7 @@
                             <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
 
                                 <Border Background="Gray" Margin="40,10" CornerRadius="15" >
-                                    
+
 
                                 </Border>
 
@@ -286,162 +286,728 @@
     </Window.Triggers>
 
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition MinWidth="240" Width="*" />
-            <ColumnDefinition Width="4*" />
-        </Grid.ColumnDefinitions>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="240" Width="*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
 
-        <Grid Background="#0B132B" >
-            <Grid.RowDefinitions>
-                <RowDefinition Height="150" />
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Image Height="65" Source=".\Assets\YOUCODE_LOGO1.png" />
-            <Separator 
+            <Grid Background="#0B132B" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Height="65" Source=".\Assets\YOUCODE_LOGO1.png" />
+                <Separator 
                     VerticalAlignment="Bottom"
                     Width="200"
                     Background="white"  />
 
 
 
-            <StackPanel Grid.Row="1" Margin="0,70"  >
+                <StackPanel Grid.Row="1" Margin="0,70"  >
 
-                <RadioButton  x:Name="btn"  Style="{StaticResource MenuButtonStyle}" Content="HOME"  Tag="{StaticResource screen}"  />
-                <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="AJOUTER"  Tag="{StaticResource plus}"  />
+                    <RadioButton  x:Name="btn"  Style="{StaticResource MenuButtonStyle}" Content="HOME"  Tag="{StaticResource screen}"  />
+                    <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="AJOUTER"  Tag="{StaticResource plus}"  />
 
-                <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="OPTIONS"  Tag="{StaticResource settings}" />
+                    <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="OPTIONS"  Tag="{StaticResource settings}" />
 
-            </StackPanel>
-        </Grid>
+                </StackPanel>
+            </Grid>
 
-        <Grid Grid.Column="1" Background="#EBEFF3" >
+            <Grid Grid.Column="1" Background="#EBEFF3" >
 
-            <Grid.RowDefinitions>
-                <RowDefinition Height="70" />
-                <RowDefinition/>
-            </Grid.RowDefinitions>
-            <Grid  Background="White" >
-                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="40,0"   >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid  Background="White" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="40,0"   >
 
-                    <Path Data="{StaticResource bell}" Fill="#0B132B" Width="25"   />
+                        <Path Data="{StaticResource bell}" Fill="#0B132B" Width="25"   />
 
-                    <Grid  >
+                        <Grid  >
 
-                        <TextBlock FontWeight="DemiBold" Text="Salah eddib" VerticalAlignment="Center" Foreground="#0B132B" FontSize="18" Margin="40,0,30,0" />
-                        <Path x:Name="path" Data="{StaticResource arrow_down}" Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center"  />
+                            <TextBlock FontWeight="DemiBold" Text="Salah eddib" VerticalAlignment="Center" Foreground="#0B132B" FontSize="18" Margin="40,0,30,0" />
+                            <Path x:Name="path" Data="{StaticResource arrow_down}" Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center"  />
 
-                        <Grid x:Name="grid" Margin="40,50,0,-52" Visibility="Hidden"   >
-                            <Rectangle x:Name="rectangle2"  Fill="White" HorizontalAlignment="Left" Height="60.6"  VerticalAlignment="Top" Width="130.527"  RadiusY="7.627" RadiusX="7.627"/>
-                            <TextBlock x:Name="textBlock" FontWeight="DemiBold"  Text=" Logout" Margin="10"  VerticalAlignment="Center" Foreground="#0B132B" FontSize="18"   />
-                            <Path x:Name="path1" Data="{StaticResource logout}"  Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"  />
+                            <Grid x:Name="grid" Margin="40,50,0,-52" Visibility="Hidden"   >
+                                <Rectangle x:Name="rectangle2"  Fill="White" HorizontalAlignment="Left" Height="60.6"  VerticalAlignment="Top" Width="130.527"  RadiusY="7.627" RadiusX="7.627"/>
+                                <TextBlock x:Name="textBlock" FontWeight="DemiBold"  Text=" Logout" Margin="10"  VerticalAlignment="Center" Foreground="#0B132B" FontSize="18"   />
+                                <Path x:Name="path1" Data="{StaticResource logout}"  Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"  />
+
+
+                            </Grid>
+                            <Rectangle x:Name="rectangle1" Fill="Transparent"   HorizontalAlignment="Left" Height="30" Margin="35,22,0,0" RadiusY="7.627" RadiusX="7.627" VerticalAlignment="Top" Width="130.527"/>
+                            <Rectangle x:Name="rectangle" Fill="Transparent"   HorizontalAlignment="Left" Height="30" Margin="35,22,0,0" RadiusY="7.627" RadiusX="7.627" VerticalAlignment="Top" Width="130.527" RenderTransformOrigin="0.5,0.5">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+
 
 
                         </Grid>
-                        <Rectangle x:Name="rectangle1" Fill="Transparent"   HorizontalAlignment="Left" Height="30" Margin="35,22,0,0" RadiusY="7.627" RadiusX="7.627" VerticalAlignment="Top" Width="130.527"/>
-                        <Rectangle x:Name="rectangle" Fill="Transparent"   HorizontalAlignment="Left" Height="30" Margin="35,22,0,0" RadiusY="7.627" RadiusX="7.627" VerticalAlignment="Top" Width="130.527" RenderTransformOrigin="0.5,0.5">
-                            <Rectangle.RenderTransform>
-                                <TransformGroup>
-                                    <ScaleTransform/>
-                                    <SkewTransform/>
-                                    <RotateTransform/>
-                                    <TranslateTransform/>
-                                </TransformGroup>
-                            </Rectangle.RenderTransform>
-                        </Rectangle>
+
+                    </StackPanel>
+
+
+                </Grid>
+
+                <Grid Grid.Row="1" >
+                    <Border Background="White" CornerRadius="20" Margin="40" >
+                        <Grid>
+
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="60"  />
+                                <RowDefinition/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="1.3*" />
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                                <ColumnDefinition/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Border Grid.Column="0"   BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                            <Border Grid.Column="1" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                            <Border Grid.Column="2" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                            <Border Grid.Column="3" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                            <Border Grid.Column="4" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                            <Border Grid.Column="5" BorderBrush="#EBEFF3" BorderThickness="0,0,0,1"  />
+
+
+                            <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" > APRENANT</TextBlock>
+                            <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="1" >Lundi</TextBlock>
+                            <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="2" >Mardi</TextBlock>
+                            <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="3"> Mercredi</TextBlock>
+                            <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="4"> Jeudi</TextBlock>
+                            <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="5"> Vendredi</TextBlock>
+
+                            <StackPanel Grid.Row="1" x:Name="aprenantStack" >
 
 
 
-                    </Grid>
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="1" x:Name="lundiStack" >
 
-                </StackPanel>
+
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="1" Grid.Column="2" x:Name="mardiStack" >
+
+
+
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="3" x:Name="mercrediStack" >
+
+
+
+                            </StackPanel>
+
+                            <StackPanel Grid.Row="1" Grid.Column="4" x:Name="jeudiStack" >
+
+
+
+                            </StackPanel>
+                            <StackPanel Grid.Row="1" Grid.Column="5" x:Name="VendrediStack" >
+
+
+
+                            </StackPanel>
+
+
+
+
+
+
+                        </Grid>
+                    </Border>
+
+
+                </Grid>
+
+
 
 
             </Grid>
 
-            <Grid Grid.Row="1" >
-                <Border Background="White" CornerRadius="20" Margin="40" >
-                    <Grid>
 
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="60"  />
-                            <RowDefinition/>
-                        </Grid.RowDefinitions>
+
+
+        </Grid>
+
+        <Grid Background="#7F0B132B" x:Name="popup" Visibility="Hidden"    >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition MinWidth="265" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border   Grid.Row="1" Grid.Column="1" Background="White"  CornerRadius="20" >
+                <Grid  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition  />
+                        <RowDefinition  />
+                        <RowDefinition  />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock x:Name="selectedAprenant" HorizontalAlignment="Center" FontSize="20" FontWeight="DemiBold" VerticalAlignment="Center" Text="APRENANT : " />
+
+                    <Grid Grid.Row="1" >
+
+
                         <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="1.3*" />
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
-                            <ColumnDefinition/>
                             <ColumnDefinition/>
                             <ColumnDefinition/>
                         </Grid.ColumnDefinitions>
 
+                        <RadioButton x:Name="jourBtn" Grid.Column="0" Width="130"  FontSize="15"  VerticalAlignment="Center"  Content="JOUR" Height="50"  >
 
-                        <Border Grid.Column="0"   BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                        <Border Grid.Column="1" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                        <Border Grid.Column="2" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                        <Border Grid.Column="3" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                        <Border Grid.Column="4" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                        <Border Grid.Column="5" BorderBrush="#EBEFF3" BorderThickness="0,0,0,1"  />
-                        
 
-                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" > APRENANT</TextBlock>
-                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="1" >Lundi</TextBlock>
-                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="2" >Mardi</TextBlock>
-                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="3"> Mercredi</TextBlock>
-                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="4"> Jeudi</TextBlock>
-                        <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="5"> Vendredi</TextBlock>
+                            <RadioButton.Resources>
 
-                        <StackPanel Grid.Row="1" x:Name="aprenantStack" >
 
-                           
+                                <Style  TargetType="{x:Type RadioButton}" >
 
-                        </StackPanel>
-                        <StackPanel Grid.Row="1" Grid.Column="1" x:Name="lundiStack" >
+                                    <Setter Property="Background" Value="Transparent"  />
+                                    <Setter Property="Foreground" Value="#0184EF"  />
+                                    <Setter Property="BorderThickness" Value="4"  />
+                                    <Setter Property="BorderBrush" Value="#0184EF"  />
 
-                          
 
-                        </StackPanel>
+                                    <Setter Property="Template"  >
 
-                        <StackPanel Grid.Row="1" Grid.Column="2" x:Name="mardiStack" >
+                                        <Setter.Value>
 
-                          
+                                            <ControlTemplate TargetType="{x:Type RadioButton}">
 
-                        </StackPanel>
-                        <StackPanel Grid.Row="1" Grid.Column="3" x:Name="mercrediStack" >
+                                                <Border CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
 
-                           
 
-                        </StackPanel>
-                        
-                        <StackPanel Grid.Row="1" Grid.Column="4" x:Name="jeudiStack" >
 
-                          
-
-                        </StackPanel>
-                        <StackPanel Grid.Row="1" Grid.Column="5" x:Name="VendrediStack" >
-
-                           
-
-                        </StackPanel>
-                       
+                                                    <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
 
 
 
 
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <Trigger Property="IsChecked" Value="True" >
+
+
+                                                        <Setter Property="Background" Value="#0184EF"  />
+                                                        <Setter Property="Foreground" Value="White"  />
+
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+
+
+
+
+
+
+                            </RadioButton.Resources>
+
+
+
+
+
+                        </RadioButton>
+
+                        <RadioButton x:Name="demiJourBtn" Grid.Column="1" Width="130"  FontSize="15"  VerticalAlignment="Center"  Content="DEMI JOUR" Height="50"  >
+
+
+                            <RadioButton.Resources>
+
+
+                                <Style  TargetType="{x:Type RadioButton}" >
+
+                                    <Setter Property="Background" Value="Transparent"  />
+                                    <Setter Property="Foreground" Value="#0184EF"  />
+                                    <Setter Property="BorderThickness" Value="4"  />
+                                    <Setter Property="BorderBrush" Value="#0184EF"  />
+
+
+                                    <Setter Property="Template"  >
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type RadioButton}">
+
+                                                <Border CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+
+                                                    <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <Trigger Property="IsChecked" Value="True" >
+
+
+                                                        <Setter Property="Background" Value="#0184EF"  />
+                                                        <Setter Property="Foreground" Value="White"  />
+
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+
+
+
+
+
+
+                            </RadioButton.Resources>
+
+
+
+
+
+                        </RadioButton>
 
                     </Grid>
-                </Border>
+
+                    <Grid Grid.Row="2" >
 
 
-            </Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0" Width="120"  FontSize="15"  VerticalAlignment="Center"  Content="ANNULER" Height="50" Click="Annuler_btn"  >
+
+
+                            <Button.Resources>
+
+
+                                <Style  TargetType="{x:Type Button}" >
+
+                                    <Setter Property="Background" Value="Transparent"  />
+                                    <Setter Property="Foreground" Value="#e74c3c"  />
+                                    <Setter Property="BorderThickness" Value="4"  />
+                                    <Setter Property="BorderBrush" Value="#e74c3c"  />
+
+
+                                    <Setter Property="Template"  >
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
 
 
 
+                                                    <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <Trigger Property="IsMouseOver" Value="True" >
+
+
+                                                        <Setter Property="Background" Value="#e74c3c"  />
+                                                        <Setter Property="Foreground" Value="White"  />
+
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+
+
+
+
+
+
+                            </Button.Resources>
+
+
+
+
+
+                        </Button>
+
+                        <Button Grid.Column="1" Width="120"  FontSize="15"  VerticalAlignment="Center"  Content="APPLIQUER" Height="50" Click="Appliquer_btn" >
+
+
+                            <Button.Resources>
+
+
+                                <Style  TargetType="{x:Type Button}" >
+
+                                    <Setter Property="Background" Value="Transparent"  />
+                                    <Setter Property="Foreground" Value="#1abc9c"  />
+                                    <Setter Property="BorderThickness" Value="4"  />
+                                    <Setter Property="BorderBrush" Value="#1abc9c"  />
+
+
+                                    <Setter Property="Template"  >
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+
+                                                    <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <Trigger Property="IsMouseOver" Value="True" >
+
+
+                                                        <Setter Property="Background" Value="#1abc9c"  />
+                                                        <Setter Property="Foreground" Value="White"  />
+
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+
+
+
+
+
+
+                            </Button.Resources>
+
+
+
+
+
+                        </Button>
+
+                    </Grid>
+
+
+                </Grid>
+            </Border>
 
         </Grid>
+
+
+        <!-- ::::::::::::::::::::::: secretary ::::::::::::::::::-->
+
+        <Grid Background="#7F0B132B" x:Name="popupSec" Visibility="Hidden"    >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition />
+                <ColumnDefinition MinWidth="265" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+
+
+            <Border   Grid.Row="1" Grid.Column="1" Background="White"  CornerRadius="20" >
+                <Grid  >
+                    <Grid.RowDefinitions>
+                        <RowDefinition  />
+                        <RowDefinition  />
+                        <RowDefinition  />
+                    </Grid.RowDefinitions>
+
+                    <TextBlock x:Name="selectedApSec" HorizontalAlignment="Center" FontSize="20" FontWeight="DemiBold" VerticalAlignment="Center" Text="APRENANT : " />
+
+                    <Grid Grid.Row="1" >
+
+
+                        <ToggleButton x:Name="justifyBtn"  Width="150"  FontSize="15"  VerticalAlignment="Center"  Content="JUSTIFIER" Height="50"  >
+
+
+                            <ToggleButton.Resources>
+
+
+                                <Style  TargetType="{x:Type ToggleButton}" >
+
+                                    <Setter Property="Background" Value="Transparent"  />
+                                    <Setter Property="Foreground" Value="#0184EF"  />
+                                    <Setter Property="BorderThickness" Value="4"  />
+                                    <Setter Property="BorderBrush" Value="#0184EF"  />
+
+
+                                    <Setter Property="Template"  >
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type ToggleButton}">
+
+                                                <Border CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+
+                                                    <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <Trigger Property="IsChecked" Value="True" >
+
+
+                                                        <Setter Property="Background" Value="#0184EF"  />
+                                                        <Setter Property="Foreground" Value="White"  />
+
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+
+
+
+
+
+
+                            </ToggleButton.Resources>
+
+
+
+
+
+                        </ToggleButton>
+
+                    </Grid>
+
+                    <Grid Grid.Row="2" >
+
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+
+                        <Button Grid.Column="0" Width="120"  FontSize="15"  VerticalAlignment="Center"  Content="ANNULER" Height="50" Click="Annuler_btn"  >
+
+
+                            <Button.Resources>
+
+
+                                <Style  TargetType="{x:Type Button}" >
+
+                                    <Setter Property="Background" Value="Transparent"  />
+                                    <Setter Property="Foreground" Value="#e74c3c"  />
+                                    <Setter Property="BorderThickness" Value="4"  />
+                                    <Setter Property="BorderBrush" Value="#e74c3c"  />
+
+
+                                    <Setter Property="Template"  >
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+
+                                                    <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <Trigger Property="IsMouseOver" Value="True" >
+
+
+                                                        <Setter Property="Background" Value="#e74c3c"  />
+                                                        <Setter Property="Foreground" Value="White"  />
+
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+
+
+
+
+
+
+                            </Button.Resources>
+
+
+
+
+
+                        </Button>
+
+                        <Button Grid.Column="1" Width="120"  FontSize="15"  VerticalAlignment="Center"  Content="APPLIQUER" Height="50" Click="Appliquer_sec_btn" >
+
+
+                            <Button.Resources>
+
+
+                                <Style  TargetType="{x:Type Button}" >
+
+                                    <Setter Property="Background" Value="Transparent"  />
+                                    <Setter Property="Foreground" Value="#1abc9c"  />
+                                    <Setter Property="BorderThickness" Value="4"  />
+                                    <Setter Property="BorderBrush" Value="#1abc9c"  />
+
+
+                                    <Setter Property="Template"  >
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border CornerRadius="6" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+
+                                                    <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <Trigger Property="IsMouseOver" Value="True" >
+
+
+                                                        <Setter Property="Background" Value="#1abc9c"  />
+                                                        <Setter Property="Foreground" Value="White"  />
+
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+
+
+
+
+
+
+                            </Button.Resources>
+
+
+
+
+
+                        </Button>
+
+                    </Grid>
+
+
+                </Grid>
+            </Border>
+
+        </Grid>
+
 
 
 
 
     </Grid>
+
 </Window>

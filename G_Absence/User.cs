@@ -68,6 +68,7 @@ namespace G_Absence
                 Ado.Connection.Open();
                 Ado.Command.CommandText = "insert into users values ( @email , @password , @firstname , @lastname , @role , @class )";
                 Ado.Command.Connection = Ado.Connection;
+                Ado.Command.Parameters.Clear();
                 Ado.Command.Parameters.AddWithValue("@email", email);
                 Ado.Command.Parameters.AddWithValue("@password", password);
                 Ado.Command.Parameters.AddWithValue("@firstname", firstname);
@@ -85,8 +86,62 @@ namespace G_Absence
 
             }
 
+        public bool AddAbsence(string date, string absenteeId , string duration )
+        {
 
-            public List<Dictionary<string, string>> GetAprenant(int classe)
+            Ado.Connection.Open();
+            Ado.Command.CommandText = "insert into absence values ( @date , @absenteeId , @duration , 0 )";
+            Ado.Command.Connection = Ado.Connection;
+            Ado.Command.Parameters.Clear();
+            Ado.Command.Parameters.AddWithValue("@date", date);
+            Ado.Command.Parameters.AddWithValue("@absenteeId", absenteeId);
+            Ado.Command.Parameters.AddWithValue("@duration", duration);
+            int numRow = Ado.Command.ExecuteNonQuery();
+            Ado.Connection.Close();
+
+            return numRow == 1;
+
+        }
+
+        public bool EditAbsence(string duration, string id)
+        {
+
+            Ado.Connection.Open();
+            Ado.Command.CommandText = "update absence set duration = @duration where id = @id ;  ";
+            Ado.Command.Connection = Ado.Connection;
+            Ado.Command.Parameters.Clear();
+            Ado.Command.Parameters.AddWithValue("@duration", duration);
+            Ado.Command.Parameters.AddWithValue("@id", id);
+            int numRow = Ado.Command.ExecuteNonQuery();
+            Ado.Connection.Close();
+
+            return numRow == 1;
+
+        }
+
+        public bool JustifyAbsence(string is_justify , string id)
+        {
+
+            Ado.Connection.Open();
+            Ado.Command.CommandText = "update absence set is_justify = @is_justify where id = @id ;  ";
+            Ado.Command.Connection = Ado.Connection;
+            Ado.Command.Parameters.Clear();
+
+            Ado.Command.Parameters.AddWithValue("@id", id);
+            Ado.Command.Parameters.AddWithValue("@is_justify", is_justify);
+            int numRow = Ado.Command.ExecuteNonQuery();
+            Ado.Connection.Close();
+
+            return numRow == 1;
+
+        }
+
+
+
+
+
+
+        public List<Dictionary<string, string>> GetAprenant(int classe)
             {
 
             var aprenants = new List<Dictionary<string, string>>();
@@ -94,6 +149,7 @@ namespace G_Absence
             Ado.Connection.Open();
             Ado.Command.CommandText = "select * from users where class = @class";
             Ado.Command.Connection = Ado.Connection;
+            Ado.Command.Parameters.Clear();
             Ado.Command.Parameters.AddWithValue("@class", classe);
             Ado.Reader = Ado.Command.ExecuteReader();
             
