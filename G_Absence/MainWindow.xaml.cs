@@ -36,14 +36,9 @@ namespace G_Absence
 
             user = User.login("salaheddib@gmail.com", "12345");
 
-            date = DateTime.Today; 
+            date = DateTime.Today;
 
-            DateTime mondayOfLastWeek = DateTime.Now.AddDays(-(int)date.DayOfWeek - 6);
-
-            DateTime mondayOLastWeek = mondayOfLastWeek.AddDays(-(int)date.DayOfWeek - 6);
-
-            //MessageBox.Show(mondayOLastWeek.StartOfWeek(DayOfWeek.Thursday).ToShortDateString());
-
+            dateText.Text = date.ToLongDateString();
 
             LoadList();
 
@@ -92,6 +87,11 @@ namespace G_Absence
                         if (absence["duration"] == "jour" && absence["is_justify"] == "True")
                         {
                             buttonL.Style = FindResource("justify") as Style;
+
+                        }else if(absence["duration"] == "demijour" && absence["is_justify"] == "True")
+                        {
+                            buttonL.Style = FindResource("demiJourJustify") as Style;
+
                         }
                         else if (absence["duration"] == "demijour")
                         {
@@ -139,6 +139,11 @@ namespace G_Absence
                         {
                             buttonMar.Style = FindResource("justify") as Style;
                         }
+                        else if (absence["duration"] == "demijour" && absence["is_justify"] == "True")
+                        {
+                            buttonMar.Style = FindResource("demiJourJustify") as Style;
+
+                        }
                         else if (absence["duration"] == "demijour")
                         {
 
@@ -185,6 +190,11 @@ namespace G_Absence
                         {
                             buttonMer.Style = FindResource("justify") as Style;
                         }
+                        else if (absence["duration"] == "demijour" && absence["is_justify"] == "True")
+                        {
+                            buttonMer.Style = FindResource("demiJourJustify") as Style;
+
+                        }
                         else if (absence["duration"] == "demijour")
                         {
 
@@ -229,6 +239,11 @@ namespace G_Absence
                         if (absence["duration"] == "jour" && absence["is_justify"] == "True")
                         {
                             buttonJ.Style = FindResource("justify") as Style;
+                        }
+                        else if (absence["duration"] == "demijour" && absence["is_justify"] == "True")
+                        {
+                            buttonJ.Style = FindResource("demiJourJustify") as Style;
+
                         }
                         else if (absence["duration"] == "demijour")
                         {
@@ -275,6 +290,11 @@ namespace G_Absence
                         if (absence["duration"] == "jour" && absence["is_justify"] == "True")
                         {
                             buttonV.Style = FindResource("justify") as Style;
+                        }
+                        else if (absence["duration"] == "demijour" && absence["is_justify"] == "True")
+                        {
+                            buttonV.Style = FindResource("demiJourJustify") as Style;
+
                         }
                         else if (absence["duration"] == "demijour")
                         {
@@ -337,7 +357,7 @@ namespace G_Absence
             }
 
             //popup.Visibility = Visibility.Visible;
-           
+
 
         }
 
@@ -465,8 +485,26 @@ namespace G_Absence
             VendrediStack.Children.Clear();
 
         }
-       
 
+        private void Previous_Wekk(object sender, RoutedEventArgs e)
+        {
+            date = date.AddDays(-(int)date.DayOfWeek - 6);
+            dateText.Text = date.ToLongDateString();
+            ClearStack();
+            LoadList();
+
+
+        }
+
+        private void Next_Week(object sender, RoutedEventArgs e)
+        {
+            if (date == DateTime.Today)
+                return;
+            date = date.AddDays((int)date.DayOfWeek + 6);
+            dateText.Text = date.ToLongDateString();
+            ClearStack();
+            LoadList();
+        }
     }
 
     public static class DateTimeExtensions

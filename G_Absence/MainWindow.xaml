@@ -191,6 +191,52 @@
 
 
 
+            <Style x:Key="demiJourJustify" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Border Background="#00FF00" Margin="40,10" CornerRadius="15" >
+
+
+                                </Border>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+
             <Style x:Key="MenuButtonStyle" TargetType="{x:Type ToggleButton}" >
 
                 <Setter Property="Background" Value="Transparent"  />
@@ -319,19 +365,20 @@
 
                 <Grid.RowDefinitions>
                     <RowDefinition Height="70" />
+                    <RowDefinition Height="70" />
                     <RowDefinition/>
                 </Grid.RowDefinitions>
-                <Grid  Background="White" >
+                <Grid  Background="White" Panel.ZIndex="100" >
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="40,0"   >
 
                         <Path Data="{StaticResource bell}" Fill="#0B132B" Width="25"   />
 
-                        <Grid  >
+                        <Grid  Panel.ZIndex="100" >
 
                             <TextBlock FontWeight="DemiBold" Text="Salah eddib" VerticalAlignment="Center" Foreground="#0B132B" FontSize="18" Margin="40,0,30,0" />
                             <Path x:Name="path" Data="{StaticResource arrow_down}" Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center"  />
 
-                            <Grid x:Name="grid" Margin="40,50,0,-52" Visibility="Hidden"   >
+                            <Grid x:Name="grid" Margin="40,50,0,-52" Visibility="Hidden" Panel.ZIndex="100"   >
                                 <Rectangle x:Name="rectangle2"  Fill="White" HorizontalAlignment="Left" Height="60.6"  VerticalAlignment="Top" Width="130.527"  RadiusY="7.627" RadiusX="7.627"/>
                                 <TextBlock x:Name="textBlock" FontWeight="DemiBold"  Text=" Logout" Margin="10"  VerticalAlignment="Center" Foreground="#0B132B" FontSize="18"   />
                                 <Path x:Name="path1" Data="{StaticResource logout}"  Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"  />
@@ -358,9 +405,146 @@
 
 
                 </Grid>
-
                 <Grid Grid.Row="1" >
-                    <Border Background="White" CornerRadius="20" Margin="40" >
+
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+
+                    <TextBlock x:Name="dateText" Margin="50,0" VerticalAlignment="Center" FontSize="20" FontWeight="SemiBold" >Monday 25 janvier </TextBlock>
+
+                    
+
+                        <StackPanel Grid.Column="1" Orientation="Horizontal" HorizontalAlignment="Right" >
+
+                        <Button Content="&lt;"  FontSize="25" FontWeight="ExtraBlack" Width="35" Padding="0,0,0,100"  Height="35" Click="Previous_Wekk"  >
+                            <Button.Resources>
+
+
+                                <Style  TargetType="{x:Type Button}" >
+
+                                    <Setter Property="Background" Value="Transparent"  />
+                                    <Setter Property="Foreground" Value="#0184EF"  />
+                                    <Setter Property="BorderThickness" Value="3"  />
+                                    <Setter Property="BorderBrush" Value="#0184EF"  />
+                                    
+
+
+                                    <Setter Property="Template"  >
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+
+                                                    <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" Height="40" Margin="0,2,2,0" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <Trigger Property="IsMouseOver" Value="True" >
+
+
+                                                        <Setter Property="Background" Value="#0184EF"  />
+                                                        <Setter Property="Foreground" Value="White"  />
+
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+
+
+
+
+
+
+                            </Button.Resources>
+
+                        </Button>
+                        <Button Content="&gt;" FontSize="25" Margin="10,0,50,0" FontWeight="ExtraBlack" Width="35" Height="35" Click="Next_Week">
+                            <Button.Resources>
+
+
+                                <Style  TargetType="{x:Type Button}" >
+
+                                    <Setter Property="Background" Value="Transparent"  />
+                                    <Setter Property="Foreground" Value="#0184EF"  />
+                                    <Setter Property="BorderThickness" Value="3"  />
+                                    <Setter Property="BorderBrush" Value="#0184EF"  />
+
+
+
+                                    <Setter Property="Template"  >
+
+                                        <Setter.Value>
+
+                                            <ControlTemplate TargetType="{x:Type Button}">
+
+                                                <Border CornerRadius="20" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+
+                                                    <ContentPresenter  Grid.Column="1" HorizontalAlignment="Center" Height="40" Margin="2,2,0,0" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+
+
+
+                                                </Border>
+
+                                                <ControlTemplate.Triggers>
+
+                                                    <Trigger Property="IsMouseOver" Value="True" >
+
+
+                                                        <Setter Property="Background" Value="#0184EF"  />
+                                                        <Setter Property="Foreground" Value="White"  />
+
+                                                    </Trigger>
+
+                                                </ControlTemplate.Triggers>
+
+
+                                            </ControlTemplate>
+
+                                        </Setter.Value>
+
+                                    </Setter>
+
+                                </Style>
+
+
+
+
+
+
+                            </Button.Resources>
+                        </Button>
+                        </StackPanel>
+
+                   
+                    
+                </Grid>
+
+                <Grid Grid.Row="2" >
+                    <Border Background="White" CornerRadius="20" Margin="40,0,40,40" >
                         <Grid>
 
                             <Grid.RowDefinitions>
