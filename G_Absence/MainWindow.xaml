@@ -244,7 +244,7 @@
 
                 <Setter Property="VerticalAlignment" Value="Center"  />
                 <Setter Property="Height" Value="60"  />
-                <Setter Property="FontSize" Value="19"  />
+                <Setter Property="FontSize" Value="17"  />
                 <Setter Property="Margin" Value="20,0,-2,0"  />
 
                 <Setter Property="Template"  >
@@ -263,7 +263,7 @@
                                     </Grid.ColumnDefinitions>
 
 
-                                    <Path Width="25" Data="{TemplateBinding Tag}" Fill="{TemplateBinding Foreground}" Style="{StaticResource {x:Type Path}}" />
+                                    <Path Width="21" Data="{TemplateBinding Tag}" Fill="{TemplateBinding Foreground}" Style="{StaticResource {x:Type Path}}" />
 
                                     <ContentPresenter Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
 
@@ -544,7 +544,7 @@
                 </Grid>
 
                 <Grid Grid.Row="2" >
-                    <Border Background="White" CornerRadius="20" Margin="40,0,40,40" >
+                    <Border Background="White" CornerRadius="10" Margin="40,0,40,40" >
                         <Grid>
 
                             <Grid.RowDefinitions>

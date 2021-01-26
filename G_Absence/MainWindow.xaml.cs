@@ -34,15 +34,13 @@ namespace G_Absence
         {
             InitializeComponent();
 
-            user = User.login("salaheddib@gmail.com", "12345");
+            user = User.login("salaheddib@gmail.com", "secretary");
 
             date = DateTime.Today;
 
             dateText.Text = date.ToLongDateString();
 
             LoadList();
-
-
 
         }
 
@@ -353,10 +351,19 @@ namespace G_Absence
                     justifyBtn.IsChecked = true;
                 }
 
-                popupSec.Visibility = Visibility.Visible;
-            }
+                if(user.Role == "secretary")
+                {
+                    popupSec.Visibility = Visibility.Visible;
+                }
 
-            //popup.Visibility = Visibility.Visible;
+                
+            }
+            if(user.Role == "former")
+            {
+                popup.Visibility = Visibility.Visible;
+
+            }
+            
 
 
         }
@@ -498,7 +505,7 @@ namespace G_Absence
 
         private void Next_Week(object sender, RoutedEventArgs e)
         {
-            if (date == DateTime.Today)
+            if (date == DateTime.Today.StartOfWeek(DayOfWeek.Monday) || date == DateTime.Today)
                 return;
             date = date.AddDays((int)date.DayOfWeek + 6);
             dateText.Text = date.ToLongDateString();
