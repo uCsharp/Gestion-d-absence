@@ -1,0 +1,427 @@
+﻿<Window x:Class="G_Absence.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:G_Absence"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="800" Width="1300">
+
+    <Window.Resources>
+
+        <ResourceDictionary>
+
+            <Style x:Key="present" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+
+                                <ContentPresenter   HorizontalAlignment="Center" VerticalAlignment="Center"  Content="{TemplateBinding Content}" />
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+
+            <Style x:Key="jour" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Border Background="Red" Margin="15,10" CornerRadius="15" >
+
+                                </Border>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+            <Style x:Key="justify" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Border Background="#00FF00" Margin="15,10" CornerRadius="15" >
+
+                                </Border>
+
+
+
+                            </Border>
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+            <Style x:Key="demiJour" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Border Background="Gray" Margin="40,10" CornerRadius="15" >
+
+
+                                </Border>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+
+
+            <Style x:Key="demiJourJustify" TargetType="{x:Type Button}" >
+
+                <Setter Property="Background" Value="White"  />
+                <Setter Property="Foreground" Value="Black"  />
+                <Setter Property="BorderBrush" Value="#EBEFF3"  />
+                <Setter Property="BorderThickness" Value="0,0,1,1"  />
+                <Setter Property="Height" Value="50"  />
+                <Setter Property="FontSize" Value="19"  />
+
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type Button}">
+
+                            <Border  Background="{TemplateBinding Background}" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Border Background="#00FF00" Margin="40,10" CornerRadius="15" >
+
+
+                                </Border>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsMouseOver" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+
+
+            <Style x:Key="MenuButtonStyle" TargetType="{x:Type ToggleButton}" >
+
+                <Setter Property="Background" Value="Transparent"  />
+                <Setter Property="Foreground" Value="White"  />
+
+                <Setter Property="VerticalAlignment" Value="Center"  />
+                <Setter Property="Height" Value="60"  />
+                <Setter Property="FontSize" Value="17"  />
+                <Setter Property="Margin" Value="20,0,-2,0"  />
+
+                <Setter Property="Template"  >
+
+                    <Setter.Value>
+
+                        <ControlTemplate TargetType="{x:Type ToggleButton}">
+
+                            <Border CornerRadius="10,0,0,10" Background="{TemplateBinding Background}" BorderThickness="{TemplateBinding BorderThickness}" >
+
+                                <Grid  >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="55" />
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+
+
+                                    <Path Width="21" Data="{TemplateBinding Tag}" Fill="{TemplateBinding Foreground}" Style="{StaticResource {x:Type Path}}" />
+
+                                    <ContentPresenter Grid.Column="1" HorizontalAlignment="Left" VerticalAlignment="Center" Content="{TemplateBinding Content}" />
+
+
+                                </Grid>
+
+
+
+                            </Border>
+
+                            <ControlTemplate.Triggers>
+
+                                <Trigger Property="IsChecked" Value="True" >
+
+                                    <Setter Property="Background" Value="#EBEFF3"  />
+                                    <Setter Property="Foreground" Value="#0184EF"  />
+                                    <Setter Property="FontWeight" Value="SemiBold"  />
+
+
+
+                                </Trigger>
+
+                            </ControlTemplate.Triggers>
+
+
+                        </ControlTemplate>
+
+                    </Setter.Value>
+
+                </Setter>
+
+            </Style>
+            <Storyboard x:Key="Storyboard1">
+                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="grid">
+                    <DiscreteObjectKeyFrame KeyTime="0:0:0.1" Value="{x:Static Visibility.Visible}"/>
+                </ObjectAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="rectangle">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="-60.8"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="rectangle">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="6.4"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="rectangle2">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="textBlock">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+                <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path1">
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.1" Value="0"/>
+                    <EasingDoubleKeyFrame KeyTime="0:0:0.3" Value="1"/>
+                </DoubleAnimationUsingKeyFrames>
+            </Storyboard>
+        </ResourceDictionary>
+
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="UIElement.MouseDown" SourceName="rectangle">
+            <BeginStoryboard x:Name="Storyboard1_BeginStoryboard" Storyboard="{StaticResource Storyboard1}"/>
+        </EventTrigger>
+        <EventTrigger RoutedEvent="UIElement.MouseDown" SourceName="rectangle1">
+            <RemoveStoryboard BeginStoryboardName="Storyboard1_BeginStoryboard"/>
+        </EventTrigger>
+    </Window.Triggers>
+
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MinWidth="240" Width="*" />
+                <ColumnDefinition Width="4*" />
+            </Grid.ColumnDefinitions>
+
+            <Grid Background="#0B132B" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="150" />
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Image Height="65" Source=".\Assets\YOUCODE_LOGO1.png" />
+                <Separator 
+                    VerticalAlignment="Bottom"
+                    Width="200"
+                    Background="white"  />
+
+
+
+                <StackPanel Grid.Row="1" Margin="0,70"  >
+
+                    <RadioButton  x:Name="btn"  Style="{StaticResource MenuButtonStyle}" Content="HOME"  Tag="{StaticResource screen}"  />
+                    <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="AJOUTER"  Tag="{StaticResource plus}"  />
+
+                    <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="OPTIONS"  Tag="{StaticResource settings}" />
+
+                </StackPanel>
+            </Grid>
+
+            <Grid Grid.Column="1" Background="#EBEFF3" >
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70" />
+                    <RowDefinition/>
+                </Grid.RowDefinitions>
+                <Grid  Background="White" Panel.ZIndex="100" >
+                    <StackPanel Orientation="Horizontal" HorizontalAlignment="Right" Margin="40,0"   >
+
+                        <Path Data="{StaticResource bell}" Fill="#0B132B" Width="25"   />
+
+                        <Grid  Panel.ZIndex="100" >
+
+                            <TextBlock FontWeight="DemiBold" Text="Salah eddib" VerticalAlignment="Center" Foreground="#0B132B" FontSize="18" Margin="40,0,30,0" />
+                            <Path x:Name="path" Data="{StaticResource arrow_down}" Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center"  />
+
+                            <Grid x:Name="grid" Margin="40,50,0,-52" Visibility="Hidden" Panel.ZIndex="100"   >
+                                <Rectangle x:Name="rectangle2"  Fill="White" HorizontalAlignment="Left" Height="60.6"  VerticalAlignment="Top" Width="130.527"  RadiusY="7.627" RadiusX="7.627"/>
+                                <TextBlock x:Name="textBlock" FontWeight="DemiBold"  Text=" Logout" Margin="10"  VerticalAlignment="Center" Foreground="#0B132B" FontSize="18"   />
+                                <Path x:Name="path1" Data="{StaticResource logout}"  Fill="#0B132B" Width="20" HorizontalAlignment="Right" VerticalAlignment="Center" Margin="0,0,10,0"  />
+
+
+                            </Grid>
+                            <Rectangle x:Name="rectangle1" Fill="Transparent"   HorizontalAlignment="Left" Height="30" Margin="35,22,0,0" RadiusY="7.627" RadiusX="7.627" VerticalAlignment="Top" Width="130.527"/>
+                            <Rectangle x:Name="rectangle" Fill="Transparent"   HorizontalAlignment="Left" Height="30" Margin="35,22,0,0" RadiusY="7.627" RadiusX="7.627" VerticalAlignment="Top" Width="130.527" RenderTransformOrigin="0.5,0.5">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+
+
+
+                        </Grid>
+
+                    </StackPanel>
+
+
+                </Grid>
+
+                <Frame Grid.Row="1" Name="frame" ></Frame>
+
+
+            </Grid>
+
+
+
+
+        </Grid>
+
+
+        <!-- ::::::::::::::::::::::: secretary ::::::::::::::::::-->
+
+      
+
+
+
+    </Grid>
+
+</Window>
