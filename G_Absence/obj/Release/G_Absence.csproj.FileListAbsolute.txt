@@ -15,3 +15,5 @@ C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absen
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.csproj.CoreCompileInputs.cache
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.exe
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.pdb
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\AprenantList.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\AprenantList.baml
