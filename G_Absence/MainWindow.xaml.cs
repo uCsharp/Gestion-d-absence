@@ -22,21 +22,81 @@ namespace G_Absence
     public partial class MainWindow : Window
     {
 
-
+        User user;
 
         public MainWindow()
         {
             InitializeComponent();
+            user = (User)Application.Current.Resources["user"];
+            HomeBtn.IsChecked = true;
 
+            if(user.Role == "admin" )
+            {
+                frame.NavigationService.Navigate(new Navigater());
+                AddBtn.Visibility = Visibility.Visible;
+            }
+            else if ( user.Role == "secretary")
+            {
+                frame.NavigationService.Navigate(new Navigater());
+            }
+            else if(user.Role == "former")
+            {
+                int classId = int.Parse(user.Classe);
+                frame.NavigationService.Navigate(new AprenantList(classId));
 
-            frame.NavigationService.Navigate(new AprenantList());
+            }
+            else
+            {
+                frame.NavigationService.Navigate(new calentrier());
+
+            }
+            
+            
+
+            
+
 
         }
 
+        private void HomeBtn_Checked(object sender, RoutedEventArgs e)
+        {
 
+            if (user.Role == "admin")
+            {
+                frame.NavigationService.Navigate(new Navigater());
+                
+            }
+            else if (user.Role == "secretary")
+            {
+                frame.NavigationService.Navigate(new Navigater());
+            }
+            else if (user.Role == "former")
+            {
+                int classId = int.Parse(user.Classe);
+                frame.NavigationService.Navigate(new AprenantList(classId));
 
+            }
+            else
+            {
+                frame.NavigationService.Navigate(new calentrier());
 
+            }
+            
+        }
 
+        private void logout(object sender, MouseButtonEventArgs e)
+        {
+            login login = new login();
+            login.Show();
+            this.Close();
+        }
+
+        private void AddBtn_Checked(object sender, RoutedEventArgs e)
+        {
+            frame.NavigationService.Navigate(new AddUser());
+            
+            
+        }
     }
 
     public static class DateTimeExtensions

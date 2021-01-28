@@ -398,12 +398,12 @@
                     </Grid.ColumnDefinitions>
 
 
-                    <Border Grid.Column="0"   BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                    <Border Grid.Column="1" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                    <Border Grid.Column="2" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                    <Border Grid.Column="3" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                    <Border Grid.Column="4" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
-                    <Border Grid.Column="5" BorderBrush="#EBEFF3" BorderThickness="0,0,0,1"  />
+                    <Border Grid.Column="0" Background="#DDE4EB" CornerRadius="10,0,0,0" BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                    <Border Grid.Column="1" Background="#DDE4EB"  BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                    <Border Grid.Column="2" Background="#DDE4EB"  BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                    <Border Grid.Column="3" Background="#DDE4EB"  BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                    <Border Grid.Column="4" Background="#DDE4EB"  BorderBrush="#EBEFF3" BorderThickness="0,0,1,1"  />
+                    <Border Grid.Column="5" Background="#DDE4EB" CornerRadius="0,10,0,0"  BorderBrush="#EBEFF3" BorderThickness="0,0,0,1"  />
 
 
                     <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" > APRENANT</TextBlock>
@@ -412,12 +412,13 @@
                     <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="3"> Mercredi</TextBlock>
                     <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="4"> Jeudi</TextBlock>
                     <TextBlock HorizontalAlignment="Center"  VerticalAlignment="Center" FontSize="19" FontWeight="SemiBold" Grid.Column="5"> Vendredi</TextBlock>
-
-                    <StackPanel Grid.Row="1" x:Name="aprenantStack" >
+                    <Border CornerRadius="0,0,0,10" Grid.Row="1" Background="#F2F5F7" >
+                    <StackPanel  x:Name="aprenantStack"   >
 
 
 
                     </StackPanel>
+                    </Border>
                     <StackPanel Grid.Row="1" Grid.Column="1" x:Name="lundiStack" >
 
 
@@ -461,7 +462,7 @@
         <Grid Background="#7F0B132B" Grid.RowSpan="2"  Visibility="Hidden"  x:Name="popup"    >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
-                <ColumnDefinition MinWidth="265" />
+                <ColumnDefinition MinWidth="300" Width="1.7*" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>
@@ -774,7 +775,7 @@
         <Grid Background="#7F0B132B" Grid.RowSpan="2" x:Name="popupSec" Visibility="Hidden"    >
             <Grid.ColumnDefinitions>
                 <ColumnDefinition />
-                <ColumnDefinition MinWidth="265" Width="1.5*" />
+                <ColumnDefinition MinWidth="300" Width="1.7*" />
                 <ColumnDefinition />
             </Grid.ColumnDefinitions>
             <Grid.RowDefinitions>

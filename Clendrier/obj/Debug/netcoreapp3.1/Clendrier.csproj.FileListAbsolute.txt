@@ -23,3 +23,5 @@ C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\bin\Debug\netcoreapp3.1\Mat
 C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\bin\Debug\netcoreapp3.1\MaterialDesignThemes.Wpf.dll
 C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\App.baml
 C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\Clendrier.csproj.CopyComplete
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\Clendrier.dll
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\Clendrier.pdb

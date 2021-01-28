@@ -17,3 +17,17 @@ C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absen
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.pdb
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\AprenantList.g.cs
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\AprenantList.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\login.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\bin\Release\MaterialDesignColors.dll
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\bin\Release\MaterialDesignThemes.Wpf.dll
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\bin\Release\MaterialDesignColors.pdb
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\bin\Release\MaterialDesignThemes.Wpf.pdb
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\bin\Release\MaterialDesignThemes.Wpf.xml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\login.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\G_Absence.csproj.CopyComplete
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\Navigater.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\Navigater.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\calentrier.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\calentrier.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\AddUser.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\AddUser.baml
