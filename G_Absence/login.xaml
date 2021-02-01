@@ -161,16 +161,16 @@
 
 
 
-        <TextBlock x:Name="textBlock" Text="Users Login" Margin="530.982,125.894,105.731,286.6" Foreground="White" TextAlignment="Center" FontSize="26" FontFamily="Corbel" Visibility="Hidden"/>
+        <TextBlock x:Name="textBlock" Text="Users Login" Margin="526.482,95.894,110.231,316.6" Foreground="White" TextAlignment="Center" FontSize="26" FontFamily="Corbel" Visibility="Hidden"/>
         <TextBlock x:Name="incorrect" Text="" Foreground="Red" TextAlignment="Center" Visibility="Hidden"/>
 
-        <materialDesign:PackIcon x:Name="packIcon" Kind="User" Width="25" Height="25" Foreground="White" Margin="490.4,203.141,0,0" Visibility="Hidden"></materialDesign:PackIcon>
-        <TextBox x:Name="txtUserName" Margin="530.982,197.847,82.18,226.659" materialDesign:HintAssist.Hint=" Email" Foreground="White" BorderBrush="White" CaretBrush="White" SelectionBrush="White" Visibility="Hidden"/>
-        <materialDesign:PackIcon x:Name="packIcon1" Kind="Lock" Width="25" Height="25" Foreground="White" RenderTransformOrigin="0.492,0.528" Margin="490.4,260.064,0,0" Visibility="Hidden"></materialDesign:PackIcon>
-        <PasswordBox x:Name="txtPassword" Margin="530.982,252.45,82.18,164.936" materialDesign:HintAssist.Hint="**********" Foreground="White" BorderBrush="White" CaretBrush="White" SelectionBrush="White" Visibility="Hidden"/>
+        <materialDesign:PackIcon x:Name="packIcon" Kind="User" Width="25" Height="25" Foreground="White" Margin="485.9,173.141,0,0" Visibility="Hidden"></materialDesign:PackIcon>
+        <TextBox x:Name="txtUserName" Margin="526.482,167.847,86.68,256.659" materialDesign:HintAssist.Hint=" Email" Foreground="White" BorderBrush="White" CaretBrush="White" SelectionBrush="White" Visibility="Hidden"/>
+        <materialDesign:PackIcon x:Name="packIcon1" Kind="Lock" Width="25" Height="25" Foreground="White" RenderTransformOrigin="0.492,0.528" Margin="485.9,230.064,0,0" Visibility="Hidden"></materialDesign:PackIcon>
+        <PasswordBox x:Name="txtPassword" Margin="526.482,222.45,86.68,194.936" materialDesign:HintAssist.Hint="**********" Foreground="White" BorderBrush="White" CaretBrush="White" SelectionBrush="White" Visibility="Hidden"/>
         <Button x:Name="BtnLogin" Click="BtnLoginClick" Width="100 " Height="40" Style="{StaticResource MaterialDesignRaisedButton}"
                                 materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#FF283DB4" Foreground="White" ToolTip="login"
-                                Content="Login" Margin="567.758,328.015,132.241,81.985" Visibility="Hidden">
+                                Content="Login" Margin="563.258,298.015,136.741,111.985" Visibility="Hidden">
             <Button.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FF0A0E2C"/>
