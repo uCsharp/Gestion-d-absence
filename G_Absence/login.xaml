@@ -7,6 +7,94 @@
         mc:Ignorable="d"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="login" Height="450" Width="800" WindowStartupLocation="CenterScreen" WindowStyle="None" ResizeMode="NoResize">
+    <Window.Resources>
+        <Storyboard x:Key="rect">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[2].(RotateTransform.Angle)" Storyboard.TargetName="image" RepeatBehavior="Forever">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="175.298"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image1" RepeatBehavior="Forever" >
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.95" Value="-0.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image1" RepeatBehavior="Forever">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.95" Value="-32.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image2" RepeatBehavior="Forever">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.41" Value="-58.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-58.4"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image2" RepeatBehavior="Forever">
+                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.41" Value="-20.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.1" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.4" Value="-20.8"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+            </DoubleAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="packIcon">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="txtUserName">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="packIcon1">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="txtPassword">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="BtnLogin">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="BtnExit">
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.3" Value="{x:Static Visibility.Hidden}"/>
+                <DiscreteObjectKeyFrame KeyTime="0:0:2.6" Value="{x:Static Visibility.Visible}"/>
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        <Storyboard x:Key="Storyboard1"/>
+        <Storyboard x:Key="Storyboard2">
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image3">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-165.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image2">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-165.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image1">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-165.6"/>
+            </DoubleAnimationUsingKeyFrames>
+            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
+                <EasingDoubleKeyFrame KeyTime="0:0:1.9" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.5" Value="-165.6"/>
+            </DoubleAnimationUsingKeyFrames>
+        </Storyboard>
+    </Window.Resources>
+    <Window.Triggers>
+        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
+            <BeginStoryboard Storyboard="{StaticResource rect}"/>
+            <BeginStoryboard Storyboard="{StaticResource Storyboard1}"/>
+            <BeginStoryboard Storyboard="{StaticResource Storyboard2}"/>
+        </EventTrigger>
+    </Window.Triggers>
     <Grid MouseDown="Border_mouseDown">
 
         <Grid.Background>
@@ -22,52 +110,86 @@
 
         </Border>
 
-        <StackPanel Orientation="Horizontal">
 
-            <StackPanel Width="350">
-                <Image Source="Assets/lgn.png" Margin="30,30,30.4,30" Width="Auto" Height="286" VerticalAlignment="Bottom" />
-                <StackPanel Orientation="Vertical" Width="200" Height="31" Margin="-100,60,75.4,0">
-                    <Image Source="Assets/YOUCODE_LOGO1.png "  Width="100"   Margin="0,0,0,209.6" VerticalAlignment="Bottom"  />
 
-                </StackPanel>
-            </StackPanel>
 
-            <StackPanel Width="350">
-                <StackPanel Margin="60 40 10 1">
-                    <TextBlock Text="Users Login" Margin="20" Foreground="White" TextAlignment="Center" FontSize="26" FontFamily="Corbel"></TextBlock>
-                    <TextBlock x:Name="incorrect" Text="" Foreground="Red" TextAlignment="Center" Visibility="Hidden"></TextBlock>
-                    <StackPanel Orientation="Horizontal" Margin="10">
-                        <materialDesign:PackIcon Kind="User" Width="25" Height="25" Foreground="White"></materialDesign:PackIcon>
-                        <TextBox x:Name="txtUserName" Margin="10 0" materialDesign:HintAssist.Hint=" Email" Foreground="White" Width="250" BorderBrush="White" CaretBrush="White" SelectionBrush="White"></TextBox>
 
-                    </StackPanel>
-                    <StackPanel Orientation="Horizontal" Margin="10 40 10 1">
-                        <materialDesign:PackIcon Kind="Lock" Width="25" Height="25" Foreground="White"></materialDesign:PackIcon>
-                        <PasswordBox x:Name="txtPassword" Margin="10 0" materialDesign:HintAssist.Hint="**********" Foreground="White" Width="250" BorderBrush="White" CaretBrush="White" SelectionBrush="White"></PasswordBox>
-                    </StackPanel>
-                    <StackPanel HorizontalAlignment="Center" Margin="50">
-                        <Button x:Name="BtnLogin" Click="BtnLoginClick" Width="100 " Height="40" Style="{StaticResource MaterialDesignRaisedButton}"
+        <Image x:Name="image3" Source="Assets/login-man.png" Margin="227.092,0,193.308,81.985" Width="Auto" Height="286" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image2" Source="Assets/blue.png" Margin="209.092,0,494.495,116.545" Width="Auto" Height="72.64" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image x:Name="image1" Source="Assets/pink.png" Margin="458.692,0,228.619,308.003" Width="Auto" Height="84.903" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Image Source="Assets/YOUCODE_LOGO1.png "  Width="100"   Margin="25.069,0,674.931,10" VerticalAlignment="Bottom"  />
+        <Image x:Name="image" Source="Assets/rect.png" Margin="209.092,0,263.666,81.985" Width="Auto" Height="246.553" VerticalAlignment="Bottom" RenderTransformOrigin="0.5,0.5" >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+
+
+
+
+
+
+        <TextBlock x:Name="textBlock" Text="Users Login" Margin="530.982,125.894,105.731,286.6" Foreground="White" TextAlignment="Center" FontSize="26" FontFamily="Corbel" Visibility="Hidden"/>
+        <TextBlock x:Name="incorrect" Text="" Foreground="Red" TextAlignment="Center" Visibility="Hidden"/>
+
+        <materialDesign:PackIcon x:Name="packIcon" Kind="User" Width="25" Height="25" Foreground="White" Margin="490.4,203.141,0,0" Visibility="Hidden"></materialDesign:PackIcon>
+        <TextBox x:Name="txtUserName" Margin="530.982,197.847,82.18,226.659" materialDesign:HintAssist.Hint=" Email" Foreground="White" BorderBrush="White" CaretBrush="White" SelectionBrush="White" Visibility="Hidden"/>
+        <materialDesign:PackIcon x:Name="packIcon1" Kind="Lock" Width="25" Height="25" Foreground="White" RenderTransformOrigin="0.492,0.528" Margin="490.4,260.064,0,0" Visibility="Hidden"></materialDesign:PackIcon>
+        <PasswordBox x:Name="txtPassword" Margin="530.982,252.45,82.18,164.936" materialDesign:HintAssist.Hint="**********" Foreground="White" BorderBrush="White" CaretBrush="White" SelectionBrush="White" Visibility="Hidden"/>
+        <Button x:Name="BtnLogin" Click="BtnLoginClick" Width="100 " Height="40" Style="{StaticResource MaterialDesignRaisedButton}"
                                 materialDesign:ButtonAssist.CornerRadius="10" BorderThickness="2" BorderBrush="#FF283DB4" Foreground="White" ToolTip="login"
-                                Content="Login">
-                            <Button.Background>
-                                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                                    <GradientStop Color="#FF0A0E2C"/>
-                                    <GradientStop Color="#FF0F1C73" Offset="1"/>
-                                </LinearGradientBrush>
-                            </Button.Background>
+                                Content="Login" Margin="567.758,328.015,132.241,81.985" Visibility="Hidden">
+            <Button.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FF0A0E2C"/>
+                    <GradientStop Color="#FF0F1C73" Offset="1"/>
+                </LinearGradientBrush>
+            </Button.Background>
 
-                        </Button>
-                    </StackPanel>
+        </Button>
 
-                </StackPanel>
-            </StackPanel>
-            <StackPanel Width="100" >
-                <Button Margin="10 20" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="{x:Null}" ToolTip="Close"
-                        x:Name="BtnExit" Click="Btn_ExitClick">
-                    <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30"  Margin="11,11,0,0" />
-                </Button>
-            </StackPanel>
-        </StackPanel>
+
+
+
+
+        <Button Margin="713.6,35.493,30.4,358.506" Style="{StaticResource MaterialDesignFloatingActionButton}" Background="{x:Null}" ToolTip="Close"
+                        x:Name="BtnExit" Click="Btn_ExitClick" Visibility="Hidden">
+            <materialDesign:PackIcon Kind="Close" Foreground="White" Width="30" Height="30"  Margin="11,11,0,0" />
+        </Button>
+
+
 
 
     </Grid>

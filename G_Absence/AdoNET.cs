@@ -32,7 +32,7 @@ namespace G_Absence
 
         public AdoNET()
         {
-            connectionString = @"Data Source=(localdb)\MSSQLLocalDB;Initial Catalog=G_Absance;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
+            connectionString = @"Data Source=ABMOULA;Initial Catalog=G_Absance;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False";
             connection = new SqlConnection(connectionString);
             command = new SqlCommand();
             adapter = new SqlDataAdapter();
