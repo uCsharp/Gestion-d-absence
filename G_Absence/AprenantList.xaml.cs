@@ -26,32 +26,38 @@ namespace G_Absence
         string[] aprenant;
         string selectedDay;
         Button button;
+        int ClassId;
 
-        public AprenantList()
+        public AprenantList(int classID)
         {
             InitializeComponent();
-            user = User.login("salaheddib@gmail.com", "former");
+            user = (User)Application.Current.Resources["user"];
             date = DateTime.Today;
             dateText.Text = date.ToLongDateString();
+            ClassId = classID;
             LoadList();
+            
 
         }
 
         void LoadList()
         {
 
-            var aprenetList = user.GetAprenant(1);
+            var aprenetList = user.GetAprenant(ClassId);
 
             aprenetList.ForEach(aprenant =>
             {
 
                 Button button = new Button();
-
+                var bc = new BrushConverter();
                 button.Content = aprenant["firstname"] + " " + aprenant["lastname"];
 
                 button.Style = FindResource("present") as Style;
                 button.FontSize = 18;
                 button.FontWeight = FontWeights.SemiBold;
+                button.Background = (Brush)bc.ConvertFrom("#F2F5F7");
+                button.BorderBrush = (Brush)bc.ConvertFrom("#DDE4EB");
+                button.BorderThickness = new Thickness(0,0,0,1);
                 button.Name = "aprenant";
                 button.Tag = aprenant["id"];
                 aprenantStack.Children.Add(button);

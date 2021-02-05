@@ -2,14 +2,22 @@
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:G_Absence"
-             StartupUri="MainWindow.xaml">
+             StartupUri="login.xaml">
     <Application.Resources>
 
         <ResourceDictionary>
 
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/assets/icons.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Light.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Defaults.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Primary/MaterialDesignColor.Blue.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignColors;component/Themes/Recommended/Accent/MaterialDesignColor.Lime.xaml" />
             </ResourceDictionary.MergedDictionaries>
+
+
+           
+          
 
             <Style TargetType="{x:Type Path}"  >
 
@@ -19,5 +27,8 @@
 
             </Style>
         </ResourceDictionary>
+        
+          
+      
     </Application.Resources>
 </Application>

@@ -19,8 +19,9 @@ namespace G_Absence
             private string classe;
 
             public string Role { get => role; set => role = value; }
+            public string Classe { get => classe; set => classe = value; }
 
-            AdoNET Ado;
+        AdoNET Ado;
 
             public User(string id, string firstname, string lastname, string email, string role, string classe)
             {
@@ -29,7 +30,7 @@ namespace G_Absence
                 this.lastname = lastname;
                 this.email = email;
                 this.Role = role;
-                this.classe = classe;
+                this.Classe = classe;
                 Ado = new AdoNET();
             }
 
