@@ -34,30 +34,6 @@
         <Frame x:Name="Main" Margin="86.4,68,-0.4,5.8" Grid.Column="1"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="71,163,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="Button_Click"/>
 
-        <Button Name="btnHelloWorld" Content="Hello World" Width="150" Margin="5" Click="btnInvoice_Click">
-            <Button.Template>
-                <ControlTemplate TargetType="Button">
-                    <Border x:Name="Border" CornerRadius="1,8,1,8" BorderThickness="2" Background="Gray" BorderBrush="Black">
-                        <Border.Effect>
-                            <DropShadowEffect />
-                        </Border.Effect>
-                        <ContentPresenter Margin="2" HorizontalAlignment="Center" VerticalAlignment="Center" RecognizesAccessKey="True"/>
-                    </Border>
-                    <ControlTemplate.Triggers>
-                        <Trigger Property="IsKeyboardFocused" Value="true">
-                            <Setter TargetName="Border" Property="BorderBrush" Value="LightGray" />
-                        </Trigger>
-                        <Trigger Property="IsMouseOver" Value="true">
-                            <Setter TargetName="Border" Property="Background" Value="LightGray" />
-                        </Trigger>
-                        <Trigger Property="IsPressed" Value="true">
-                            <Setter TargetName="Border" Property="Background" Value="White" />
-                            <Setter TargetName="Border" Property="BorderBrush" Value="Black" />
-                        </Trigger>
-                    </ControlTemplate.Triggers>
-                </ControlTemplate>
-            </Button.Template>
-        </Button>
-
+        
     </Grid>
 </Window>
