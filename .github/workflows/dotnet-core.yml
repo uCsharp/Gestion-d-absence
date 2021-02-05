@@ -45,11 +45,11 @@ jobs:
 
     - name: Build
       run: |
-        dotnet restore Gestion-d-absence\G_Absence\G_Absence.csproj/Gestion-d-absence\G_Absence\G_Absence.csproj
-        msbuild /t:Pack /p:Configuration=Debug Gestion-d-absence\G_Absence\G_Absence.csproj
+        dotnet restore G_Absence\G_Absence.csproj
+        msbuild /t:Pack /p:Configuration=Debug G_Absence\G_Absence.csproj
     
     - name: Copy
-      run: copy DotNet.Core.Console.Exemple/bin/Debug/*.nupkg .
+      run: copy G_Absence/bin/Debug/*.nupkg .
     
     # - name: PushNuget
     #   run: dotnet nuget push *.nupkg --source https://api.nuget.org/v3/index.json --api-key ${{ secrets.PUBLISH_TO_NUGET_ORG }} --skip-duplicate
