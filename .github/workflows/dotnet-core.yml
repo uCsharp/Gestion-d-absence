@@ -46,7 +46,7 @@ jobs:
     - name: Build
       run: |
         dotnet restore Gestion-d-absence\G_Absence\G_Absence.csproj/Gestion-d-absence\G_Absence\G_Absence.csproj
-        msbuild /t:Pack /p:Configuration=Debug Gestion-d-absence\G_Absence\G_Absence.csproj/Gestion-d-absence\G_Absence\G_Absence.csproj
+        msbuild /t:Pack /p:Configuration=Debug Gestion-d-absence\G_Absence\G_Absence.csproj
     
     - name: Copy
       run: copy DotNet.Core.Console.Exemple/bin/Debug/*.nupkg .
