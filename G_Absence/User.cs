@@ -165,14 +165,12 @@ namespace G_Absence
             var aprenants = new List<Dictionary<string, string>>();
 
             Ado.Connection.Open();
-            Ado.Command.CommandText = "select * from users where class = @class";
+            Ado.Command.CommandText = "select * from users where class = @class " ;
             Ado.Command.Connection = Ado.Connection;
             Ado.Command.Parameters.Clear();
             Ado.Command.Parameters.AddWithValue("@class", classe);
             Ado.Reader = Ado.Command.ExecuteReader();
             
-
-
             if (Ado.Reader.HasRows)
             {
                 while (Ado.Reader.Read())

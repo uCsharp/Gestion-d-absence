@@ -106,7 +106,7 @@ namespace G_Absence
 
                             buttonL.Style = FindResource("demiJour") as Style;
 
-                        }else if(absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != null)
+                        }else if(absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != string.Empty)
                         {
 
                             buttonL.Style = FindResource("jourJ") as Style;
@@ -224,10 +224,10 @@ namespace G_Absence
                             buttonMer.Style = FindResource("demiJour") as Style;
 
                         }
-                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != null)
+                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != string.Empty)
                         {
 
-                            buttonL.Style = FindResource("jourJ") as Style;
+                            buttonMer.Style = FindResource("jourJ") as Style;
 
                         }
                         else
@@ -281,10 +281,10 @@ namespace G_Absence
                             buttonJ.Style = FindResource("demiJour") as Style;
 
                         }
-                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != null)
+                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != string.Empty)
                         {
 
-                            buttonL.Style = FindResource("jourJ") as Style;
+                            buttonJ.Style = FindResource("jourJ") as Style;
 
                         }
                         else
@@ -339,10 +339,10 @@ namespace G_Absence
                             buttonV.Style = FindResource("demiJour") as Style;
 
                         }
-                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != null)
+                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != string.Empty)
                         {
 
-                            buttonL.Style = FindResource("jourJ") as Style;
+                            buttonV.Style = FindResource("jourJ") as Style;
 
                         }
                         else
@@ -471,7 +471,7 @@ namespace G_Absence
                         UploadProgress = 100
                     });
 
-                    filename = DateTime.Now.ToString().Replace("/", "-").Replace(":", "-") + "_8_" + filename;
+                    filename = DateTime.Now.ToString().Replace("/", "-").Replace(":", "-") + "£" + filename;
 
                     File.Copy(files[i], @"..\..\files\" + filename );
 

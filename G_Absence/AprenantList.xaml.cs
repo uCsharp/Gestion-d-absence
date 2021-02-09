@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -68,7 +69,7 @@ namespace G_Absence
                 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: lundi
 
                 Button buttonL = new Button();
-                string[] apr = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null };
+                string[] apr = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null , null };
                 buttonL.Style = FindResource("present") as Style;
                 absanceList.ForEach(absence =>
                 {
@@ -79,6 +80,7 @@ namespace G_Absence
                         apr[3] = absence["id"];
                         apr[4] = absence["duration"];
                         apr[5] = absence["is_justify"];
+                        apr[6] = absence["justification"];
 
                         if (absence["duration"] == "jour" && absence["is_justify"] == "True")
                         {
@@ -94,6 +96,12 @@ namespace G_Absence
                         {
 
                             buttonL.Style = FindResource("demiJour") as Style;
+
+                        }
+                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != string.Empty)
+                        {
+
+                            buttonL.Style = FindResource("jourJ") as Style;
 
                         }
                         else
@@ -118,18 +126,17 @@ namespace G_Absence
                 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: mardi
 
                 Button buttonMar = new Button();
-                string[] apr1 = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null };
+                string[] apr1 = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null , null };
                 buttonMar.Style = FindResource("present") as Style;
                 absanceList.ForEach(absence =>
                 {
-
-
 
                     if (absence["date"] == date.StartOfWeek(DayOfWeek.Tuesday).ToString())
                     {
                         apr1[3] = absence["id"];
                         apr1[4] = absence["duration"];
                         apr1[5] = absence["is_justify"];
+                        apr1[6] = absence["justification"];
 
 
                         if (absence["duration"] == "jour" && absence["is_justify"] == "True")
@@ -145,6 +152,12 @@ namespace G_Absence
                         {
 
                             buttonMar.Style = FindResource("demiJour") as Style;
+
+                        }
+                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != string.Empty)
+                        {
+
+                            buttonMar.Style = FindResource("jourJ") as Style;
 
                         }
                         else
@@ -170,7 +183,7 @@ namespace G_Absence
                 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: mercredi
 
                 Button buttonMer = new Button();
-                string[] apr2 = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null };
+                string[] apr2 = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null , null };
                 buttonMer.Style = FindResource("present") as Style;
                 absanceList.ForEach(absence =>
                 {
@@ -182,6 +195,7 @@ namespace G_Absence
                         apr2[3] = absence["id"];
                         apr2[4] = absence["duration"];
                         apr2[5] = absence["is_justify"];
+                        apr2[6] = absence["justification"];
 
                         if (absence["duration"] == "jour" && absence["is_justify"] == "True")
                         {
@@ -196,6 +210,12 @@ namespace G_Absence
                         {
 
                             buttonMer.Style = FindResource("demiJour") as Style;
+
+                        }
+                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != string.Empty)
+                        {
+
+                            buttonMer.Style = FindResource("jourJ") as Style;
 
                         }
                         else
@@ -220,7 +240,7 @@ namespace G_Absence
                 //:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: jeudi
 
                 Button buttonJ = new Button();
-                string[] apr3 = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null };
+                string[] apr3 = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null , null };
                 buttonJ.Style = FindResource("present") as Style;
                 absanceList.ForEach(absence =>
                 {
@@ -232,6 +252,7 @@ namespace G_Absence
                         apr3[3] = absence["id"];
                         apr3[4] = absence["duration"];
                         apr3[5] = absence["is_justify"];
+                        apr3[6] = absence["justification"];
 
                         if (absence["duration"] == "jour" && absence["is_justify"] == "True")
                         {
@@ -246,6 +267,12 @@ namespace G_Absence
                         {
 
                             buttonJ.Style = FindResource("demiJour") as Style;
+
+                        }
+                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != string.Empty)
+                        {
+
+                            buttonJ.Style = FindResource("jourJ") as Style;
 
                         }
                         else
@@ -271,18 +298,16 @@ namespace G_Absence
 
 
                 Button buttonV = new Button();
-                string[] apr4 = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null };
+                string[] apr4 = { aprenant["id"], aprenant["firstname"], aprenant["lastname"], null, null, null , null};
                 buttonV.Style = FindResource("present") as Style;
                 absanceList.ForEach(absence =>
                 {
-
-
-
                     if (absence["date"] == date.StartOfWeek(DayOfWeek.Friday).ToString())
                     {
                         apr4[3] = absence["id"];
                         apr4[4] = absence["duration"];
                         apr4[5] = absence["is_justify"];
+                        apr4[6] = absence["justification"];
 
                         if (absence["duration"] == "jour" && absence["is_justify"] == "True")
                         {
@@ -297,6 +322,12 @@ namespace G_Absence
                         {
 
                             buttonV.Style = FindResource("demiJour") as Style;
+
+                        }
+                        else if (absence["duration"] == "jour" && absence["is_justify"] == "False" && absence["justification"] != string.Empty)
+                        {
+
+                            buttonV.Style = FindResource("jourJ") as Style;
 
                         }
                         else
@@ -333,6 +364,7 @@ namespace G_Absence
             selectedDay = button.Name;
             selectedAprenant.Text = "APRENANT : " + aprenant[1] + " " + aprenant[2];
             selectedApSec.Text = "APRENANT : " + aprenant[1] + " " + aprenant[2];
+            fileOpener.Visibility = Visibility.Hidden;
 
             if (aprenant[3] != null)
             {
@@ -351,7 +383,19 @@ namespace G_Absence
                 }
 
                 if (user.Role == "secretary")
+
                 {
+
+                    if(aprenant[6] != string.Empty)
+                    {
+                        fileOpener.Visibility = Visibility.Visible;
+                        FileInfo fileInfo = new FileInfo(@"..\..\files\" + aprenant[6]);
+
+                        fileName.Text = fileInfo.Name.Split('£')[1];
+                        fileSize.Text = String.Format("{0} {1}", (fileInfo.Length / 1.049e+6).ToString("0.0"), "Mb");
+
+                    }
+
                     popupSec.Visibility = Visibility.Visible;
                 }
 
@@ -511,6 +555,13 @@ namespace G_Absence
             dateText.Text = date.ToLongDateString();
             ClearStack();
             LoadList();
+        }
+
+        private void OpenFile(object sender, RoutedEventArgs e)
+        {
+
+            System.Diagnostics.Process.Start(@"..\..\files\" + aprenant[6]);
+
         }
     }
 }
