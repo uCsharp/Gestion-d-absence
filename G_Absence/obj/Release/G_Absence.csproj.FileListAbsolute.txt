@@ -31,3 +31,7 @@ C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\calentr
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\calentrier.baml
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\AddUser.g.cs
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\AddUser.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\Calendrier.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\Calendrier.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\CustomControl\FileDetails.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\CustomControl\FileDetails.baml

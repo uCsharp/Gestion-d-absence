@@ -47,7 +47,7 @@ namespace G_Absence
             }
             else
             {
-                frame.NavigationService.Navigate(new calentrier());
+                frame.NavigationService.Navigate(new Calendrier());
 
             }
             
@@ -78,7 +78,7 @@ namespace G_Absence
             }
             else
             {
-                frame.NavigationService.Navigate(new calentrier());
+                frame.NavigationService.Navigate(new Calendrier());
 
             }
             

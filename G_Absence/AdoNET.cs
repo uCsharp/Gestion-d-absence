@@ -16,9 +16,7 @@ namespace G_Absence
         private SqlDataReader reader;
         private SqlDataAdapter adapter;
         private string connectionString;
-        private DataTable dtCat;
-        private DataTable dtMovie;
-        private DataSet ds;
+
 
 
         public SqlConnection Connection { get => connection; set => connection = value; }
@@ -26,9 +24,7 @@ namespace G_Absence
         public SqlDataReader Reader { get => reader; set => reader = value; }
         public SqlDataAdapter Adapter { get => adapter; set => adapter = value; }
         public string ConnectionString { get => connectionString; }
-        public DataTable DtCat { get => dtCat; set => dtCat = value; }
-        public DataTable DtMovie { get => dtMovie; set => dtMovie = value; }
-        public DataSet Ds { get => ds; set => ds = value; }
+
 
         public AdoNET()
         {
@@ -36,7 +32,7 @@ namespace G_Absence
             connection = new SqlConnection(connectionString);
             command = new SqlCommand();
             adapter = new SqlDataAdapter();
-            ds = new DataSet();
+      
 
         }
     }

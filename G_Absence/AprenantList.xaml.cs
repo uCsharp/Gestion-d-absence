@@ -21,7 +21,6 @@ namespace G_Absence
     public partial class AprenantList : Page
     {
         DateTime date;
-
         User user;
         string[] aprenant;
         string selectedDay;

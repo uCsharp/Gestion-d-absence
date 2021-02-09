@@ -1,7 +1,11 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\admin",
+    "\\Login",
+    "\\Login\\Img",
+    "\\WpfApp1"
   ],
-  "SelectedNode": "\\admin",
+  "SelectedNode": "\\admin\\MainWindow.xaml.cs",
   "PreviewInSolutionExplorer": false
 }

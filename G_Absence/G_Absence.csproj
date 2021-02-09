@@ -45,6 +45,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -69,8 +70,14 @@
     <Compile Include="AprenantList.xaml.cs">
       <DependentUpon>AprenantList.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Calendrier.xaml.cs">
+      <DependentUpon>Calendrier.xaml</DependentUpon>
+    </Compile>
     <Compile Include="calentrier.xaml.cs">
       <DependentUpon>calentrier.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CustomControl\FileDetails.xaml.cs">
+      <DependentUpon>FileDetails.xaml</DependentUpon>
     </Compile>
     <Compile Include="login.xaml.cs">
       <DependentUpon>login.xaml</DependentUpon>
@@ -91,7 +98,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Calendrier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="calentrier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CustomControl\FileDetails.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,6 +173,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Assets\n8_a256l_400x400.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="files\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets" Condition="Exists('..\packages\MaterialDesignThemes.3.2.0\build\MaterialDesignThemes.targets')" />

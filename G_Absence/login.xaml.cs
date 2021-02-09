@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Data.SqlClient;
 using System.Windows;
 
 using System.Windows.Input;
@@ -55,7 +55,7 @@ namespace G_Absence
 
 
                 }
-                catch (Exception ex)
+                catch (SqlException ex)
                 {
                     MessageBox.Show("Error", ex.Message + Environment.NewLine + ex.StackTrace);
                 }

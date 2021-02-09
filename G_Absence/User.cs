@@ -20,12 +20,13 @@ namespace G_Absence
 
             public string Role { get => role; set => role = value; }
             public string Classe { get => classe; set => classe = value; }
+            public int Id { get => id; set => id = value; }
 
         AdoNET Ado;
 
             public User(string id, string firstname, string lastname, string email, string role, string classe)
             {
-                this.id = int.Parse(id);
+                this.Id = int.Parse(id);
                 this.firstname = firstname;
                 this.lastname = lastname;
                 this.email = email;
@@ -90,8 +91,10 @@ namespace G_Absence
         public bool AddAbsence(string date, string absenteeId , string duration )
         {
 
+            
+
             Ado.Connection.Open();
-            Ado.Command.CommandText = "insert into absence values ( @date , @absenteeId , @duration , 0 )";
+            Ado.Command.CommandText = "insert into absence values ( @date , @absenteeId , @duration , 0 , null )";
             Ado.Command.Connection = Ado.Connection;
             Ado.Command.Parameters.Clear();
             Ado.Command.Parameters.AddWithValue("@date", date);
@@ -137,6 +140,20 @@ namespace G_Absence
 
         }
 
+        public bool Justification(string justification, string id)
+        {
+            Ado.Connection.Open();
+            Ado.Command.CommandText = "update absence set justification = @justification where id = @id ; ";
+            Ado.Command.Connection = Ado.Connection;
+            Ado.Command.Parameters.Clear();
+            Ado.Command.Parameters.AddWithValue("@id", id);
+            Ado.Command.Parameters.AddWithValue("@justification" , justification );
+            int numRow = Ado.Command.ExecuteNonQuery();
+            Ado.Connection.Close();
+
+            return numRow == 1;
+
+        }
 
 
 
@@ -172,6 +189,36 @@ namespace G_Absence
             return aprenants;
 
 
+        }
+
+        public List<Dictionary<string, string>> GetUserById(int id)
+        {
+
+            var aprenants = new List<Dictionary<string, string>>();
+
+            Ado.Connection.Open();
+            Ado.Command.CommandText = "select * from users where id = @id";
+            Ado.Command.Connection = Ado.Connection;
+            Ado.Command.Parameters.Clear();
+            Ado.Command.Parameters.AddWithValue("@id", id);
+            Ado.Reader = Ado.Command.ExecuteReader();
+
+
+            if (Ado.Reader.HasRows)
+            {
+                while (Ado.Reader.Read())
+                {
+                    var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "firstname", Ado.Reader["firstname"].ToString() }, { "lastname", Ado.Reader["lastname"].ToString() } };
+
+                    aprenants.Add(dict);
+
+                }
+
+            }
+            Ado.Connection.Close();
+
+            return aprenants;
+
 
         }
 
@@ -189,7 +236,7 @@ namespace G_Absence
             {
                 while (Ado.Reader.Read())
                 {
-                    var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "date", Ado.Reader["date"].ToString() }, { "duration", Ado.Reader["duration"].ToString() } , { "is_justify", Ado.Reader["is_justify"].ToString() } };
+                    var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "date", Ado.Reader["date"].ToString() }, { "duration", Ado.Reader["duration"].ToString() } , { "is_justify", Ado.Reader["is_justify"].ToString() }, { "justification", Ado.Reader["justification"].ToString() } }; 
 
                     absence.Add(dict);
 
