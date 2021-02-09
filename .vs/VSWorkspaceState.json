@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\admin",
-    "\\Login",
-    "\\Login\\Img",
-    "\\WpfApp1"
+    "\\Login\\Img"
   ],
-  "SelectedNode": "\\admin\\MainWindow.xaml.cs",
+  "SelectedNode": "\\Gestion-d-absence.sln",
   "PreviewInSolutionExplorer": false
 }
