@@ -34,6 +34,9 @@
         <Button Content="Asence justifier" HorizontalAlignment="Center" Margin="0,2,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Width="267" Height="56"/>
         <Button Content="Asence Non justifier" HorizontalAlignment="Center" Margin="0,2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="267" Height="56" Grid.Column="2"/>
         <Image HorizontalAlignment="Center" Height="108" Margin="0,1,0,0" VerticalAlignment="Top" Width="267" Source="/1.jpg" Stretch="Fill"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,72,0,0" Grid.Row="1" Text="10" TextWrapping="Wrap" VerticalAlignment="Top" Width="56" FontFamily="Arial Black" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Center" Margin="0,72,0,0" Grid.Row="1" Text="5" Grid.Column="2" TextWrapping="Wrap" VerticalAlignment="Top" Width="25" FontFamily="Arial Black" FontSize="16"/>
+        <TextBlock HorizontalAlignment="Left" Margin="119,76,0,0" Grid.Row="1" Text="3" Grid.Column="1" TextWrapping="Wrap" VerticalAlignment="Top" Width="25" FontFamily="Arial Black" FontSize="16"/>
 
 
 
