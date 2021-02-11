@@ -1,0 +1,44 @@
+﻿<Page x:Class="Clendrier.Statistique"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Clendrier"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Statistique" Width="1240" Height="700" Background="White">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <TextBlock  Text="Nom :" Grid.Column="1" Margin="0,1,192,76" FontFamily="Arial Black"/>
+        <TextBlock  Text="Prénom :" Grid.Column="1" Margin="0,30,192,40"  FontFamily="Arial Black"/>
+        <TextBlock  Text="Classe :" Grid.Column="1" Margin="0,60,192,12"  FontFamily="Arial Black"/>
+        <TextBlock  Text="Niveau :" Grid.Column="1" Margin="0,88,192,10"  FontFamily="Arial Black"/>
+        <Button Content="votre historique d'absence" Grid.Column="2" HorizontalAlignment="Center" Margin="0,30,0,0" VerticalAlignment="Top" Height="50" Width="267"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="74,32,0,0" Text="SALAH" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" FontFamily="Arial Black" Height="16" Width="59"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="74,4,0,0" Text="EDDIB" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" FontFamily="Arial Black" Height="16" Width="59"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="79,62,0,0" Text="c#" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" FontFamily="Arial Black" Height="16" Width="59"/>
+        <TextBlock Grid.Column="1" HorizontalAlignment="Left" Margin="79,87,0,0" Text="2éme annés" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="10" FontFamily="Arial Black" Height="16" Width="95"/>
+        <DataGrid Grid.ColumnSpan="3" Margin="0,112,0,0" Grid.RowSpan="4"/>
+        <Button Content="Totale d'absence" HorizontalAlignment="Center" Margin="0,2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="267" Height="55"/>
+        <Button Content="Asence justifier" HorizontalAlignment="Center" Margin="0,2,0,0" Grid.Row="1" Grid.Column="1" VerticalAlignment="Top" Width="267" Height="56"/>
+        <Button Content="Asence Non justifier" HorizontalAlignment="Center" Margin="0,2,0,0" Grid.Row="1" VerticalAlignment="Top" Width="267" Height="56" Grid.Column="2"/>
+        <Image HorizontalAlignment="Center" Height="108" Margin="0,1,0,0" VerticalAlignment="Top" Width="267" Source="/1.jpg" Stretch="Fill"/>
+
+
+
+
+    </Grid>
+
+
+</Page>

@@ -8,5 +8,6 @@
         Title="MainWindow" Width="1240" Height="700">
     <Grid>
         <Frame x:Name="Main" Navigated="Main_Navigated" ></Frame>
+       
     </Grid>
 </Window>

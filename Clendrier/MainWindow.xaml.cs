@@ -24,7 +24,8 @@ namespace Clendrier
         {
             InitializeComponent();
 
-            Main.Content = new calendreir();
+          //  Main.Content = new calendreir();
+            Main.Content = new Statistique();
         }
 
         private void Main_Navigated(object sender, NavigationEventArgs e)
