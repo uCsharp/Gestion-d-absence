@@ -1,0 +1,15 @@
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\admin.csprojAssemblyReference.cache
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\MainWindow.g.cs
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\App.g.cs
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\admin_MarkupCompile.cache
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\admin_MarkupCompile.lref
+C:\Users\youcode\Desktop\admin\admin\bin\Debug\admin.exe.config
+C:\Users\youcode\Desktop\admin\admin\bin\Debug\admin.exe
+C:\Users\youcode\Desktop\admin\admin\bin\Debug\admin.pdb
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\MainWindow.baml
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\admin.g.resources
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\admin.Properties.Resources.resources
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\admin.csproj.GenerateResource.cache
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\admin.csproj.CoreCompileInputs.cache
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\admin.exe
+C:\Users\youcode\Desktop\admin\admin\obj\Debug\admin.pdb

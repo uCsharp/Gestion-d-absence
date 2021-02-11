@@ -4,17 +4,26 @@
 winexe
 C#
 .cs
-C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\
+C:\Users\youcode\Desktop\Gestion-d-absence\Clendrier\obj\Debug\netcoreapp3.1\
 Clendrier
 none
 false
 TRACE;DEBUG;NETCOREAPP;NETCOREAPP3_1;
+<<<<<<< HEAD
 C:\Users\Youcode\Desktop\Gestion-d-absence\Clendrier\App.xaml
 3-123707108
 
 6-1428586714
 202-1879774930
 calendreir.xaml;MainWindow.xaml;Statistique.xaml;
+=======
+C:\Users\youcode\Desktop\Gestion-d-absence\Clendrier\App.xaml
+21561084010
 
-False
+4358357942
+1921654412462
+calendreir.xaml;MainWindow.xaml;
+>>>>>>> 976c3d4d85d2e3ad9d9d7e4ac63bbae99b0dad41
+
+True
 
