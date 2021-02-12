@@ -135,6 +135,7 @@
 
                     <RadioButton Style="{StaticResource MenuButtonStyle}"  Content="OPTIONS"  Tag="{StaticResource settings}" />
                     <RadioButton x:Name="AddBtn" Style="{StaticResource MenuButtonStyle}"  Content="AJOUTER"  Tag="{StaticResource plus}" Visibility="Hidden" Checked="AddBtn_Checked"   />
+                    <RadioButton x:Name="users" Style="{StaticResource MenuButtonStyle}"  Content="Utilisateurs"  Tag="{StaticResource users}" Checked="Utilisateurs" Visibility="Hidden" />
 
                 </StackPanel>
             </Grid>

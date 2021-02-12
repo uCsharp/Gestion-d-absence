@@ -11,7 +11,7 @@
 
     <Grid Height="450" Width="800" >
         <Border Background="White" CornerRadius="20" Margin="40,0,40,40" >
-            <Button Content="Button" FontSize="18" FontWeight="SemiBold" Height="50" Margin="246,324,286.6,22" Click="Button_Click">
+            <Button  x:Name="btn" Content="Insérer" FontSize="18" FontWeight="SemiBold" Height="50" Margin="246,324,286.6,22" Click="Button_Click">
                 <Button.Resources>
 
 
@@ -94,7 +94,7 @@
         <TextBox  x:Name="password" MaxLength="100" Background="White" BorderBrush="Black" Margin="484,152,81,265"  />
         <TextBox  x:Name="Prenom" MaxLength="100" Background="White" BorderBrush="Black" Margin="485,82,80,335"  />
         <TextBox  x:Name="email" MaxLength="100" Background="White" BorderBrush="Black" Margin="128,153,437,264"  />
-        <ComboBox x:Name="clas" Margin="179,233,494,185" Height="32">
+        <ComboBox x:Name="cls" Margin="179,233,494,185" Height="32">
             <ComboBoxItem Content="1"/>
             <ComboBoxItem  Content="2"/>
             <ComboBoxItem Content="3"/>

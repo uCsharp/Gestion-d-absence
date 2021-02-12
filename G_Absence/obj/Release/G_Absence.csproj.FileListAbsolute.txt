@@ -35,3 +35,7 @@ C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\Calendr
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\Calendrier.baml
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\CustomControl\FileDetails.g.cs
 C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\CustomControl\FileDetails.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\CrudTable.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\CrudTable.baml
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\status.g.cs
+C:\Users\youcode\Desktop\absence\Gestion-d-absence\G_Absence\obj\Release\status.baml

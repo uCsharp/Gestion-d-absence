@@ -61,7 +61,7 @@ namespace G_Absence
                 button.Name = "aprenant";
                 button.Tag = aprenant["id"];
                 aprenantStack.Children.Add(button);
-
+                button.Click += new RoutedEventHandler(status);
 
 
                 var absanceList = user.GetAbsence(aprenant["id"]);
@@ -412,6 +412,17 @@ namespace G_Absence
         }
 
 
+        private void status(object sender, RoutedEventArgs e)
+        {
+
+            button = (sender as Button);
+
+            this.NavigationService.Navigate(new status(button.Tag.ToString()));
+           
+
+        }
+
+
 
 
         private void Annuler_btn(object sender, RoutedEventArgs e)
@@ -419,6 +430,8 @@ namespace G_Absence
             Clearbtn();
 
         }
+
+
 
 
 

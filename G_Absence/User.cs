@@ -88,6 +88,23 @@ namespace G_Absence
 
             }
 
+
+        public bool supUsers(string id)
+        {
+
+            Ado.Connection.Open();
+            Ado.Command.CommandText = "DELETE FROM users where Id = @id ";
+            Ado.Command.Connection = Ado.Connection;
+            Ado.Command.Parameters.Clear();
+            Ado.Command.Parameters.AddWithValue("@id", id);
+            int numRow = Ado.Command.ExecuteNonQuery();
+            Ado.Connection.Close();
+
+            return numRow == 1;
+
+        }
+
+
         public bool AddAbsence(string date, string absenteeId , string duration )
         {
 
@@ -106,6 +123,42 @@ namespace G_Absence
             return numRow == 1;
 
         }
+
+
+        public List<Dictionary<string, string>> GetRole(string role)
+        {
+
+            var userRole = new List<Dictionary<string, string>>();
+
+
+            Ado.Connection.Open();
+            Ado.Command.CommandText = "select * from users where role = @role";
+            Ado.Command.Connection = Ado.Connection;
+            Ado.Command.Parameters.Clear();
+            Ado.Command.Parameters.AddWithValue("@role", role);
+            Ado.Reader = Ado.Command.ExecuteReader();
+
+
+
+            if (Ado.Reader.HasRows)
+            {
+                while (Ado.Reader.Read())
+                {
+                    var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "firstname", Ado.Reader["firstname"].ToString() }, { "lastname", Ado.Reader["lastname"].ToString() }, { "Email", Ado.Reader["Email"].ToString() }, { "role", Ado.Reader["role"].ToString() } };
+
+                    userRole.Add(dict);
+
+                }
+
+            }
+            Ado.Connection.Close();
+
+            return userRole;
+
+
+
+        }
+
 
         public bool EditAbsence(string duration, string id)
         {
@@ -175,7 +228,7 @@ namespace G_Absence
             {
                 while (Ado.Reader.Read())
                 {
-                    var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "firstname", Ado.Reader["firstname"].ToString() }, { "lastname", Ado.Reader["lastname"].ToString() } };
+                    var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "firstname", Ado.Reader["firstname"].ToString() }, { "lastname", Ado.Reader["lastname"].ToString() } , { "Email", Ado.Reader["Email"].ToString() } };
 
                     aprenants.Add(dict);
 
@@ -188,6 +241,9 @@ namespace G_Absence
 
 
         }
+
+
+
 
         public List<Dictionary<string, string>> GetUserById(int id)
         {
@@ -206,7 +262,7 @@ namespace G_Absence
             {
                 while (Ado.Reader.Read())
                 {
-                    var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "firstname", Ado.Reader["firstname"].ToString() }, { "lastname", Ado.Reader["lastname"].ToString() } };
+                    var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "firstname", Ado.Reader["firstname"].ToString() }, { "lastname", Ado.Reader["lastname"].ToString() } , { "Email", Ado.Reader["Email"].ToString() } , { "password", Ado.Reader["password"].ToString() } , { "role", Ado.Reader["role"].ToString() } , { "class", Ado.Reader["class"].ToString() } };
 
                     aprenants.Add(dict);
 
@@ -235,6 +291,37 @@ namespace G_Absence
                 while (Ado.Reader.Read())
                 {
                     var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "date", Ado.Reader["date"].ToString() }, { "duration", Ado.Reader["duration"].ToString() } , { "is_justify", Ado.Reader["is_justify"].ToString() }, { "justification", Ado.Reader["justification"].ToString() } }; 
+
+                    absence.Add(dict);
+
+                }
+
+            }
+
+            Ado.Connection.Close();
+
+
+            return absence;
+
+        }
+
+
+
+        public List<Dictionary<string, string>> GetAbsencej(string id , string month)
+        {
+            var absence = new List<Dictionary<string, string>>();
+
+            Ado.Connection.Open();
+            Ado.Command.CommandText = "select * from  absence where user_id = " + id + " and MONTH(date) = "+ month ;
+            Ado.Command.Connection = Ado.Connection;
+
+            Ado.Reader = Ado.Command.ExecuteReader();
+
+            if (Ado.Reader.HasRows)
+            {
+                while (Ado.Reader.Read())
+                {
+                    var dict = new Dictionary<string, string> { { "id", Ado.Reader["id"].ToString() }, { "date", Ado.Reader["date"].ToString() }, { "duration", Ado.Reader["duration"].ToString() }, { "is_justify", Ado.Reader["is_justify"].ToString() }, { "justification", Ado.Reader["justification"].ToString() } };
 
                     absence.Add(dict);
 

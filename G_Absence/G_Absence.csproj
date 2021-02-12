@@ -76,6 +76,9 @@
     <Compile Include="calentrier.xaml.cs">
       <DependentUpon>calentrier.xaml</DependentUpon>
     </Compile>
+    <Compile Include="CrudTable.xaml.cs">
+      <DependentUpon>CrudTable.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CustomControl\FileDetails.xaml.cs">
       <DependentUpon>FileDetails.xaml</DependentUpon>
     </Compile>
@@ -84,6 +87,9 @@
     </Compile>
     <Compile Include="Navigater.xaml.cs">
       <DependentUpon>Navigater.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="status.xaml.cs">
+      <DependentUpon>status.xaml</DependentUpon>
     </Compile>
     <Compile Include="User.cs" />
     <Page Include="AddUser.xaml">
@@ -103,6 +109,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="calentrier.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="CrudTable.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -128,6 +138,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="Navigater.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="status.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

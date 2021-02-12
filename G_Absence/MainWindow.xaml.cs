@@ -34,6 +34,7 @@ namespace G_Absence
             {
                 frame.NavigationService.Navigate(new Navigater());
                 AddBtn.Visibility = Visibility.Visible;
+                users.Visibility = Visibility.Visible;
             }
             else if ( user.Role == "secretary")
             {
@@ -93,10 +94,19 @@ namespace G_Absence
 
         private void AddBtn_Checked(object sender, RoutedEventArgs e)
         {
-            frame.NavigationService.Navigate(new AddUser());
+            frame.NavigationService.Navigate(new AddUser(null));
             
             
         }
+
+        private void Utilisateurs(object sender, RoutedEventArgs e)
+        {
+            frame.NavigationService.Navigate(new CrudTable());
+
+
+        }
+
+
     }
 
     public static class DateTimeExtensions

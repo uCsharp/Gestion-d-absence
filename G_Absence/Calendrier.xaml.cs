@@ -391,7 +391,7 @@ namespace G_Absence
                     
                     UploadingFileList.Items.Add(new FileDetails()
                     {
-                        FileName = fileInfo.Name,
+                        FileName = fileInfo.Name.Split('£')[1],
                         FileSize = String.Format("{0} {1}", (fileInfo.Length / 1.049e+6).ToString("0.0"), "Mb"),
                         UploadProgress = 100
                     });
